@@ -1,0 +1,22 @@
+﻿Merge tool  for VS 2019
+
+Настройки если проект начинать с нуля
+
+1. Open "Инструменты(Tools) -> Параметры(Options)..." in VS
+2. Goto "Система управления версиями(Source Control) -> выбрать Visual Studio Team Foundation Server 
+-> Настройка пользовательских инструментов(Configure User Tools...)"
+3. Click "Add.." 
+4. Set UnityYAMLMerge as the merge tool for .unity and .prefab files (argument %1 %2 %3 %4) Операция ОБЪЕДИНИТЬ
+5. Probably remove mergetool config settings from the .git config 
+
+Настройки если проект уже на гите
+
+C:\Users\gitconfig
+
+заменить в файле gitconfig merge tool 
+
+[merge]
+    tool = unityyamlmerge
+[mergetool "unityyamlmerge"]
+    trustExitCode = false
+    cmd = \"D:\Programs\Unity Editors\\Editor\\Data\\Tools\\UnityYAMLMerge.exe\" merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"

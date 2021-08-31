@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<devices>
+
+
+  <device nameDevice = "kpa10">
+
+    <initialPositions>
+
+      <control name = "p#0#">
+        <position>1000</position>
+     
+      <uprav>
+        <name>потенциометр "Pt"</name>
+        <poloz>1000</poloz>
+      </uprav>
+
+      <luft>
+        <left>150</left>
+        <right>150</right>
+      </luft>
+      </control>
+
+      <control name = "b#0#">
+        <position>0</position>
+
+        <uprav>
+          <name>кнопка КП-1</name>
+          <poloz>отжата</poloz>
+        </uprav>
+
+        <luft>
+          <left>0</left>
+          <right>0</right>
+        </luft>
+
+      </control>
+
+      <control name = "b#1#">
+        <position>0</position>
+
+        <uprav>
+          <name>кнопка КП-2</name>
+          <poloz>отжата</poloz>
+        </uprav>
+
+        <luft>
+          <left>0</left>
+          <right>0</right>
+        </luft>
+
+      </control>
+      
+      
+    </initialPositions>
+
+  </device>
+
+
+
+</devices>

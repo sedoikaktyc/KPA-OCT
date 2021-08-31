@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<devices>
+
+
+
+  <device nameDevice = "kpa9">
+
+    <initialPositions>
+
+      <control name = "b#0#">
+        <position>0</position>
+      </control>
+
+      <uprav>
+        <name>имя органа управления</name>
+        <poloz>Положение органа управления</poloz>
+      </uprav>
+
+      <luft>
+        <left>левый люфт</left>
+        <right>правый люфт</right>
+      </luft>
+
+      <UpravWork>
+        <proverkaNU>нужна ли проверка в начальных условиях(на случай если орган управления отъебнул)[true,false]</proverkaNU>
+        <proverkaPZI>нужна ли проверка в сценарии(на случай если орган управления отъебнул)[true,false]</proverkaPZI>
+      </UpravWork>
+
+      <LinkUprav>
+        <LinkToIMG>KPAengine\Pic KPA\Pic\5.jpg</LinkToIMG>
+        <vinoska>10</vinoska>
+      </LinkUprav>
+
+    </initialPositions>
+
+  </device>
+
+
+  <device nameDevice = "kpa10">
+
+    <initialPositions>
+
+      <control name = "b#0#">
+        <position>0</position>
+      </control>
+
+    </initialPositions>
+
+  </device>
+
+
+	
+</devices>

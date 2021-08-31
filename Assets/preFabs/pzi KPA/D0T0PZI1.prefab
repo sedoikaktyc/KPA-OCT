@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7663494304414895330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7663494304642526100}
+  - component: {fileID: 7663494304414895331}
+  m_Layer: 0
+  m_Name: D0T0PZI1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &7663494304642526100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7663494304414895330}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -327.7189, y: -265.80753, z: -77.52828}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7663494304414895331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7663494304414895330}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f140340128f5f041a5347cec7ede95b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PziName: D0T0PZI1
+  Project: 1
+  Table1:
+    Blocks: []
+  Table2:
+    Blocks: []
+  Table3:
+    Blocks: []
+  Table4:
+    Blocks: []
+  TableKPA:
+    Blocks:
+    - Name: sERP4-001
+      obj: {fileID: 0}
+      TextRu: "\u0423\u041B\u041C \u0415\u0420\u041F4-001"
+      TextEng: 
+      Table: 0
+    - Name: s2600M
+      obj: {fileID: 0}
+      TextRu: "\u044F\u0447\u0441\u0444\u044B\u0432\u0439\u0446\u0443"
+      TextEng: 
+      Table: 0
+    - Name: sqwe1
+      obj: {fileID: 0}
+      TextRu: "\u0444\u044B\u0432\u044F\u0447\u0441"
+      TextEng: 
+      Table: 0
+  PZI:
+    Steps:
+    - Obj: {fileID: 0}
+      ObjName: l0
+      TextRu: "\u041F\u0440\u043E\u0438\u0437\u0432\u0435\u0434\u0438\u0442\u0435
+        \u043A\u043E\u043D\u0442\u0440\u043E\u043B\u044C \u0447\u0435\u0433\u043E\u0442\u043E
+        \u0442\u0430\u043C"
+      TextEng: 
+      Answer: 0
+      Gap: 0
+      Parent: {fileID: 0}
+      ParentName: s2600M
+      TypeOfAnswer: 0
+      TypeOfArduinoAnswer: 0
+    - Obj: {fileID: 0}
+      ObjName: l3
+      TextRu: "\u041F\u0440\u043E\u0438\u0437\u0432\u0435\u0434\u0438\u0442\u0435
+        \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435 \u0447\u0435\u0433\u043E\u0442\u043E
+        \u0442\u0430\u043C"
+      TextEng: 
+      Answer: 0
+      Gap: 0
+      Parent: {fileID: 0}
+      ParentName: s2600M
+      TypeOfAnswer: 1
+      TypeOfArduinoAnswer: 0
+    - Obj: {fileID: 0}
+      ObjName: e2
+      TextRu: "\u041F\u0440\u043E\u0438\u0437\u0432\u0435\u0434\u0438\u0442\u0435
+        \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435 \u0447\u0435\u0433\u043E\u0442\u043E
+        \u0442\u0430\u043C"
+      TextEng: 
+      Answer: 0
+      Gap: 0
+      Parent: {fileID: 0}
+      ParentName: s2600M
+      TypeOfAnswer: 2
+      TypeOfArduinoAnswer: 1
+    - Obj: {fileID: 0}
+      ObjName: c0
+      TextRu: "\u041F\u0440\u043E\u0438\u0437\u0432\u0435\u0434\u0438\u0442\u0435
+        \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435 \u0447\u0435\u0433\u043E\u0442\u043E
+        \u0442\u0430\u043C"
+      TextEng: 
+      Answer: 50
+      Gap: 5
+      Parent: {fileID: 0}
+      ParentName: s2600M
+      TypeOfAnswer: 2
+      TypeOfArduinoAnswer: 2
+  InfoObject: {fileID: 0}

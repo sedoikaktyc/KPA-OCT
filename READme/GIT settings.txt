@@ -1,0 +1,31 @@
+1. Putty Key 
+1.0 https://habr.com/ru/post/217869/ мануал для настройки Putty
+1.1 скачать и установить Putty Key Gen https://www.puttygen.com/
+1.2 next next next
+1.3 открыть PuTTY Key Generator и сгенерировать RSA ключь
+1.4 Скопирвоать публичный SSH ключи и добавить его в настройках свего GitHub аккаунта (SSH and GPG keys)
+1.5 в PuTTY Key Generator выбрать сохранить приватный ключь
+
+2. Скачать и установить Git
+2.1 next next next
+
+3. Скачать и установить tortoisegit
+3.1 next next next
+
+4. получить и принять приглашение в закрытый репозиторий
+
+5. в папке где будет распологаться проект сделать git clone с urll удаленного репозитория
+
+6. Настройка Merge Tool Unity 
+6.1 TortoiseGit -> Settings -> Merge Tool -> Advanced -> add  Добавить файл с расшырение .unity и указать путь
+C:\Program Files\Unity\Hub\Editor\2019.4.15f1\Editor\Data\Tools\UnityYAMLMerge.exe merge -p %base %theirs %mine %merged
+6.2 повторить для расширении .prefab 
+6.3 В файле C:\Program Files\Unity\Hub\Editor\2019.4.15f1\Editor\Data\Tools\mergespecfile добавить после 23 строки 
+# Tortoise Git Merge
+* use "%programs%\TortoiseGit\bin\TortoiseGitMerge.exe" -base:"%b" -mine:"%l" -theirs:"%r" -merged:"%d"
+
+7. запусить проект через unity hub\
+
+comment
+comment2
+

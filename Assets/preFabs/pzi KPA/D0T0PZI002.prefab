@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3334644657429963667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3334644657429963665}
+  - component: {fileID: 3334644657429963664}
+  m_Layer: 0
+  m_Name: D0T0PZI002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3334644657429963665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3334644657429963667}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3334644657429963664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3334644657429963667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f140340128f5f041a5347cec7ede95b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PziName: D0T0PZI002
+  Project: 1
+  Table1:
+    Blocks: []
+  Table2:
+    Blocks: []
+  Table3:
+    Blocks: []
+  Table4:
+    Blocks: []
+  TableKPA:
+    Blocks:
+    - Name: s2600M
+      obj: {fileID: 0}
+      TextRu: qwe1
+      TextEng: 
+      Table: 0
+    - Name: sERP4-001
+      obj: {fileID: 0}
+      TextRu: qwe2
+      TextEng: 
+      Table: 0
+    - Name: sGUPM-300
+      obj: {fileID: 0}
+      TextRu: qwe3
+      TextEng: 
+      Table: 0
+  PZI:
+    Steps:
+    - ObjForStep:
+      - Obj: {fileID: 0}
+        ObjName: l0
+        ObjParent: {fileID: 0}
+        ObjParentName: s2600M
+      - Obj: {fileID: 0}
+        ObjName: l1
+        ObjParent: {fileID: 0}
+        ObjParentName: s2600M
+      - Obj: {fileID: 0}
+        ObjName: l0
+        ObjParent: {fileID: 0}
+        ObjParentName: sERP4-001
+      TextRu: shag text
+      TextEng: 
+      Answer: 0
+      Gap: 0
+      TypeOfAnswer: 0
+      TypeOfArduinoAnswer: 0
+  InfoObject: {fileID: 0}
