@@ -10853,6 +10853,115 @@ public class PziLogic : MonoBehaviour
 
                 break;
 
+            case "LM2D2T7PZI10":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        AllStringToSend.Add("on31");
+                                        AllStringToSend.Add("on14");
+                                        AllStringToSend.Add("on20");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                    case "0":
+
+                                        sendToArduino("off");
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+                            case "4":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+                                        if (Step == 8) 
+                                        {
+                                            sendToArduino("on19");
+                                        }
+
+                                        if (Step == 14)
+                                        {
+                                            sendToArduino("off19");
+                                        }
+
+                                        if (Step == 16)
+                                        {
+                                            sendToArduino("on19");
+                                        }
+
+                                        if (Step == 33)
+                                        {
+                                            sendToArduino("off19");
+                                        }
+                                        break;
+
+                                    case "0":
+                                        if (Step == 11)
+                                        {
+                                            sendToArduino("off19");
+                                        }
+                                        break;
+
+
+                                }
+
+                                break;
+
+                            case "5":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+                                        if (Step == 12)
+                                        {
+                                            sendToArduino("on19");
+                                        }
+                                        break;
+
+
+                                }
+
+                                break;
+
+                        }
+
+                        break;
+
+                    
+
+
+                }
+
+
+                break;
+
         }
 
 
@@ -11859,6 +11968,20 @@ public class PziLogic : MonoBehaviour
         if (Step == 13)
         {
             StopCoroutine(_coroutine);
+        }
+
+    }
+
+    public void LM2D2T7PZI10()
+    {
+        if (Step == 14)
+        {
+            sendToArduino("111");
+        }
+
+        if (Step == 16)
+        {
+            sendToArduino("222");
         }
 
     }
