@@ -38,7 +38,7 @@ boolean buttPos[BUTTNUM] = {false, false, false, false, false, false, false}; //
 boolean buttRev[BUTTNUM] = {false, false, false, false, false, false, false}; // Реверс кнопки
 
 unsigned long buttTime[BUTTNUM] = {0, 0, 0, 0, 0, 0, 0}; // Момент времени изменения положения кнопки
-
+int i2 = 0;
 ////                                                                            ////
 //        ПЕРЕМЕННЫЕ ДВУХПОЗИЦИОННЫХ ТУМБЛЕРОВ                                    //
 ////                                                                            ////
@@ -168,6 +168,7 @@ uint8_t oldRawPos[ENCNUM] = {127, 127, 127, 127}; // Предыдущее пол
 #define ELEMNUM 58
 
 String str = "";
+String str2 = "";
 int i;
 int n = 0;
 unsigned long t = 0;
@@ -571,92 +572,136 @@ void loop() {
      checkElem = true;
     }
 
-////                                                                            ////
-//        РАБОТА КНОПОК                                                           //
-////                                                                            ////
-
- for(int i = 0; i < BUTTNUM; i++){ // Опрос кнопок
-    if(buttRev[i] == false){
-
-      if((digitalRead(buttPin[4]) == HIGH) && (buttPos[4] == true) ||
-          (digitalRead(buttPin[6]) == HIGH) && (buttPos[6] == true)){
-            delay(100);
-            if((digitalRead(buttPin[4]) == HIGH) && (buttPos[4] == true) ||
-          (digitalRead(buttPin[6]) == HIGH) && (buttPos[6] == true)){
-        t = millis();
-        if((t - buttTime[i]) > BUTTDELAY){
-          Serial.print("b");
-          Serial.print("#"); 
-          Serial.print(7);
-          Serial.print("#"); 
-
-          Serial.println("0");
-          buttTime[i] = t;
-          buttPos[i] = false; 
-        }
-      }
-          }
-
-
-
+  //        РАБОТА КНОПОК                                                           //
+  ////                                                                            ////
+  for (int i = 0; i < BUTTNUM; i++) { // Опрос кнопок
+   if (str2 == "") {
+    if (buttRev[i] == false) {
+     
+        
       
-      if((digitalRead(buttPin[i]) == HIGH) && (buttPos[i] == true)){
+      if ((digitalRead(buttPin[i]) == HIGH) && (buttPos[i] == true)) {
         t = millis();
-        if((t - buttTime[i]) > BUTTDELAY){
+        if ((t - buttTime[i]) > BUTTDELAY) {
           Serial.print("b");
-          Serial.print("#"); 
+          Serial.print("#");
           Serial.print(i);
-          Serial.print("#"); 
-
+          Serial.print("#");
           Serial.println("0");
           buttTime[i] = t;
-          buttPos[i] = false; 
+          buttPos[i] = false;
         }
       }
-      else if((digitalRead(buttPin[i]) == LOW) && (buttPos[i] == false)){
+      else if ((digitalRead(buttPin[i]) == LOW) && (buttPos[i] == false)) {
         t = millis();
-        if((t - buttTime[i]) > BUTTDELAY){
+        if ((t - buttTime[i]) > BUTTDELAY) {
           Serial.print("b");
-          Serial.print("#"); 
+          Serial.print("#");
           Serial.print(i);
-          Serial.print("#"); 
-
+          Serial.print("#");
           Serial.println("1");
           buttTime[i] = t;
-          buttPos[i] = true; 
-        }      
-      } 
-    }
-    else{
-      if((digitalRead(buttPin[i]) == HIGH) && (buttPos[i] == false)){
-        t = millis();
-        if((t - buttTime[i]) > BUTTDELAY){
-          Serial.print("b");
-          Serial.print("#"); 
-          Serial.print(i);
-          Serial.print("#"); 
-
-          Serial.println("1");
-          buttTime[i] = t;
-          buttPos[i] = true; 
-        }      
+          buttPos[i] = true;
+        }
       }
-      else if((digitalRead(buttPin[i]) == LOW) && (buttPos[i] == true)){
+    }
+    else {
+      if ((digitalRead(buttPin[i]) == HIGH) && (buttPos[i] == false)) {
         t = millis();
-        if((t - buttTime[i]) > BUTTDELAY){
+        if ((t - buttTime[i]) > BUTTDELAY) {
           Serial.print("b");
-          Serial.print("#"); 
+          Serial.print("#");
           Serial.print(i);
-          Serial.print("#"); 
-
+          Serial.print("#");
+          Serial.println("1");
+          buttTime[i] = t;
+          buttPos[i] = true;
+        }
+      }
+      else if ((digitalRead(buttPin[i]) == LOW) && (buttPos[i] == true)) {
+        t = millis();
+        if ((t - buttTime[i]) > BUTTDELAY) {
+          Serial.print("b");
+          Serial.print("#");
+          Serial.print(i);
+          Serial.print("#");
           Serial.println("0");
           buttTime[i] = t;
-          buttPos[i] = false; 
-        }  
-      } 
+          buttPos[i] = false;
+        }
+      }
     }
-  }
+   }
 
+       if (str2 == "111") {
+    if (buttRev[i] == false) {
+     
+        
+      
+      if ((digitalRead(buttPin[4]) == HIGH) && (buttPos[4] == true) && (digitalRead(buttPin[6]) == HIGH) && (buttPos[6] == true)) {
+        t = millis();
+        if ((t - buttTime[i]) > BUTTDELAY) {
+          Serial.print("b");
+          Serial.print("#");
+          Serial.print(4);
+          Serial.print("#");
+          Serial.println("0");
+          buttTime[4] = t;
+          buttPos[4] = false;
+          buttTime[6] = t;
+          buttPos[6] = false;
+        }
+      }
+      else if ((digitalRead(buttPin[4]) == LOW) && (buttPos[4] == false) && (digitalRead(buttPin[6]) == LOW) && (buttPos[6] == false)) {
+        t = millis();
+        if ((t - buttTime[i]) > BUTTDELAY) {
+          Serial.print("b");
+          Serial.print("#");
+          Serial.print(4);
+          Serial.print("#");
+          Serial.println("1");
+          buttTime[4] = t;
+          buttPos[4] = true;
+          buttTime[6] = t;
+          buttPos[6] = true;
+        }
+      }
+    }
+    else {
+      if ((digitalRead(buttPin[4]) == HIGH) && (buttPos[4] == false) && (digitalRead(buttPin[6]) == HIGH) && (buttPos[6] == false)) {
+        t = millis();
+        if ((t - buttTime[i]) > BUTTDELAY) {
+          Serial.print("b");
+          Serial.print("#");
+          Serial.print(4);
+          Serial.print("#");
+          Serial.println("1");
+          buttTime[4] = t;
+          buttPos[4] = true;
+          buttTime[6] = t;
+          buttPos[6] = true;
+        }
+      }
+      else if ((digitalRead(buttPin[4]) == LOW) && (buttPos[4] == true) && (digitalRead(buttPin[6]) == LOW) && (buttPos[6] == true)) {
+        t = millis();
+        if ((t - buttTime[i]) > BUTTDELAY) {
+          Serial.print("b");
+          Serial.print("#");
+          Serial.print(4);
+          Serial.print("#");
+          Serial.println("0");
+          buttTime[4] = t;
+          buttPos[4] = false;
+          buttTime[6] = t;
+          buttPos[6] = false;
+        }
+      }
+    }
+   }
+   
+  }
+  
+  
 ////                                                                            ////
 //        РАБОТА ДВУХПОЗИЦИОННЫХ ТУМБЛЕРОВ                                        //
 ////                                                                            ////
@@ -1094,6 +1139,12 @@ void loop() {
           Serial.println(" ");
         #endif
       }
+    }
+    if(str.substring(0, 3).equals("111")){
+      str2 = "111";
+    }
+    if(str.substring(0, 3).equals("222")){
+      str2 = "";
     }
     
   } // КОНЕЦ СВЯЗИ С ПК
