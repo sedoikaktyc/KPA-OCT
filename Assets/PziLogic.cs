@@ -10309,7 +10309,13 @@ public class PziLogic : MonoBehaviour
 
                                     case "0":
 
-                                        sendToArduino("off");
+                                        AllStringToSend.Add("off");
+                                        AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("s1goto0");
+                                        AllStringToSend.Add("s2goto0");
+                                        AllStringToSend.Add("s3goto0");
+                                        AllStringToSend.Add("s4goto0");
+                                        StartCoroutine(SendStringsToArduino());
 
                                         break;
 
@@ -10526,7 +10532,13 @@ public class PziLogic : MonoBehaviour
 
                                     case "0":
 
-                                        sendToArduino("off");
+                                        AllStringToSend.Add("off");
+                                        AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("s1goto0");
+                                        AllStringToSend.Add("s2goto0");
+                                        AllStringToSend.Add("s3goto0");
+                                        AllStringToSend.Add("s4goto0");
+                                        StartCoroutine(SendStringsToArduino());
 
                                         break;
 
@@ -10641,7 +10653,13 @@ public class PziLogic : MonoBehaviour
 
                                     case "0":
 
-                                        sendToArduino("off");
+                                        AllStringToSend.Add("off");
+                                        AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("s1goto0");
+                                        AllStringToSend.Add("s2goto0");
+                                        AllStringToSend.Add("s3goto0");
+                                        AllStringToSend.Add("s4goto0");
+                                        StartCoroutine(SendStringsToArduino());
 
                                         break;
 
@@ -10769,7 +10787,13 @@ public class PziLogic : MonoBehaviour
 
                                     case "0":
 
-                                        sendToArduino("off");
+                                        AllStringToSend.Add("off");
+                                        AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("s1goto0");
+                                        AllStringToSend.Add("s2goto0");
+                                        AllStringToSend.Add("s3goto0");
+                                        AllStringToSend.Add("s4goto0");
+                                        StartCoroutine(SendStringsToArduino());
 
                                         break;
 
