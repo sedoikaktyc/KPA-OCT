@@ -6514,7 +6514,7 @@ public class PziLogic : MonoBehaviour
 
                                                 AllStringToSend.Add("on0");
                                                 AllStringToSend.Add("on1");
-                                                AllStringToSend.Add("s0goto11");
+                                                AllStringToSend.Add("s0goto121");
 
 
 
@@ -6672,7 +6672,7 @@ public class PziLogic : MonoBehaviour
                                     case 4:
 
 
-                                        sendToArduino("s0goto130");
+                                        sendToArduino("s0goto131");
 
 
                                         break;
@@ -6727,7 +6727,7 @@ public class PziLogic : MonoBehaviour
                                         {
 
 
-                                            sendToArduino("s0goto" + map(Convert.ToInt32(StrFromArduino[2]), 0, 480, 0, 98));
+                                            sendToArduino("s0goto" + map(Convert.ToInt32(StrFromArduino[2]), 0, 480, 0, 97));
                                             //AllStringToSend.Add("s0goto" + map(Convert.ToInt32(StrFromArduino[2]), 0, 480, 0, 98));
 
 
@@ -6764,7 +6764,7 @@ public class PziLogic : MonoBehaviour
                                         if (Step == 22)
                                         {
 
-                                            sendToArduino("s0goto" + map(Convert.ToInt32(StrFromArduino[2]), 0, 500, 98, 100));
+                                            sendToArduino("s0goto" + map(Convert.ToInt32(StrFromArduino[2]), 0, 500, 98, 101));
                                             //AllStringToSend.Add("s0goto" + map(Convert.ToInt32(StrFromArduino[2]), 0, 500, 98, 100));
                                             // StartCoroutine(SendStringsToArduino());
                                         }
@@ -6830,8 +6830,23 @@ public class PziLogic : MonoBehaviour
                                     case 2:
                                         sendToArduino("s0goto0");
                                         break;
+
                                 }
                                 break;
+
+                            case "3":
+                                switch (Convert.ToInt32(StrFromArduino[2]))
+                                {
+                                    case 18:
+                                        sendToArduino("s1goto68");
+                                        break;
+                                    default:
+                                        sendToArduino("s1goto70");
+                                        break;
+
+                                }
+                                break;
+
                         }
                         break;
                     case "p":
@@ -6924,6 +6939,29 @@ public class PziLogic : MonoBehaviour
                                         break;
                                 }
                                 break;
+
+                            case "2":
+                                switch (Convert.ToInt32(StrFromArduino[2]))
+                                {
+
+                                    case 18:
+                                        sendToArduino("s1goto67");
+                                        break;
+
+                                    case 20:
+                                        sendToArduino("s1goto67");
+                                        break;
+
+                                    case 2:
+                                        sendToArduino("s1goto67");
+                                        break;
+
+                                    default:
+                                        sendToArduino("s1goto70");
+                                        break;
+                                }
+                                break;
+
                         }
                         break;
 
@@ -7008,14 +7046,42 @@ public class PziLogic : MonoBehaviour
                                     case "1":
                                         AllStringToSend.Add("on1");
                                         AllStringToSend.Add("on3");
-                                        AllStringToSend.Add("s0goto11");
+                                        AllStringToSend.Add("s0goto150");
                                         StartCoroutine(SendStringsToArduino());
                                         break;
                                     default:
                                         AllStringToSend.Add("off1");
                                         AllStringToSend.Add("off3");
                                         AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("mon0");
                                         StartCoroutine(SendStringsToArduino());
+                                        break;
+                                }
+                                break;
+                            case "17":
+                                switch (StrFromArduino[2])
+
+                                {
+                                    case "1":
+                                        sendToArduino("mon-4095");
+                                        break;
+                                    default:
+                                        sendToArduino("mon0");
+                                        break;
+                                }
+                                break;
+                        }
+                        break;
+
+                    case "e":
+                        switch (StrFromArduino[1])
+                        {
+                            case "0":
+                                switch (StrFromArduino[2])
+
+                                {
+                                    case "4":
+                                        sendToArduino("s0goto140");
                                         break;
                                 }
                                 break;
@@ -7046,20 +7112,30 @@ public class PziLogic : MonoBehaviour
                                         break;
                                 }
                                 break;
+                            case "0":
+                                switch (StrFromArduino[2])
+
+                                {
+                                    case "0":
+                                        sendToArduino("mon0");
+                                        break;
+                                    
+                                }
+                                break;
                         }
                         break;
 
                     case "p":
                         switch (StrFromArduino[1])
                         {
-                            case "0":
+                            case "1":
                                 switch (StrFromArduino[2])
 
                                 {
                                     default:
 
 
-                                        sendToArduino("mon" + map(Convert.ToInt32(StrFromArduino[2]), 0, 1000, 2044, 2024));
+                                        sendToArduino("mon" + map(Convert.ToInt32(StrFromArduino[2]), 50, 0, 2044, 2024));
 
                                         break;
                                 }
@@ -7090,6 +7166,17 @@ public class PziLogic : MonoBehaviour
                                         break;
                                 }
                                 break;
+                            case "0":
+                                switch (StrFromArduino[2])
+
+                                {
+                                    case "0":
+                                        sendToArduino("mon0");
+                                        break;
+
+                                }
+                                break;
+
                         }
                         break;
 
@@ -7111,12 +7198,13 @@ public class PziLogic : MonoBehaviour
                                 {
                                     case "1":
 
-                                        AllStringToSend.Add("s0goto11");
+                                        AllStringToSend.Add("s0goto150");
                                         StartCoroutine(SendStringsToArduino());
                                         break;
                                     default:
 
                                         AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("mon0");
                                         StartCoroutine(SendStringsToArduino());
                                         break;
                                 }
@@ -7139,14 +7227,14 @@ public class PziLogic : MonoBehaviour
                     case "p":
                         switch (StrFromArduino[1])
                         {
-                            case "0":
+                            case "1":
                                 switch (StrFromArduino[2])
 
                                 {
                                     default:
 
 
-                                        sendToArduino("mon" + map(Convert.ToInt32(StrFromArduino[2]), 0, 1000, 2021, 2018));
+                                        sendToArduino("mon" + map(Convert.ToInt32(StrFromArduino[2]), 50, 0, 2021, 2018));
 
                                         break;
                                 }
@@ -7180,6 +7268,16 @@ public class PziLogic : MonoBehaviour
                                         break;
                                 }
                                 break;
+                            case "0":
+                                switch (StrFromArduino[2])
+
+                                {
+                                    case "0":
+                                        sendToArduino("mon0");
+                                        break;
+
+                                }
+                                break;
                         }
                         break;
 
@@ -7206,6 +7304,16 @@ public class PziLogic : MonoBehaviour
                                     default:
                                         sendToArduino("mon0");
                                         break;
+                                }
+                                break;
+                            case "0":
+                                switch (StrFromArduino[2])
+
+                                {
+                                    case "0":
+                                        sendToArduino("mon0");
+                                        break;
+
                                 }
                                 break;
                         }
@@ -7242,12 +7350,13 @@ public class PziLogic : MonoBehaviour
                                 {
                                     case "1":
 
-                                        AllStringToSend.Add("s0goto11");
+                                        AllStringToSend.Add("s0goto150");
                                         StartCoroutine(SendStringsToArduino());
                                         break;
                                     default:
 
                                         AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("mon0");
                                         StartCoroutine(SendStringsToArduino());
                                         break;
                                 }
@@ -10309,7 +10418,13 @@ public class PziLogic : MonoBehaviour
 
                                     case "0":
 
-                                        sendToArduino("off");
+                                        AllStringToSend.Add("off");
+                                        AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("s1goto0");
+                                        AllStringToSend.Add("s2goto0");
+                                        AllStringToSend.Add("s3goto0");
+                                        AllStringToSend.Add("s4goto0");
+                                        StartCoroutine(SendStringsToArduino());
 
                                         break;
 
@@ -10526,7 +10641,13 @@ public class PziLogic : MonoBehaviour
 
                                     case "0":
 
-                                        sendToArduino("off");
+                                        AllStringToSend.Add("off");
+                                        AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("s1goto0");
+                                        AllStringToSend.Add("s2goto0");
+                                        AllStringToSend.Add("s3goto0");
+                                        AllStringToSend.Add("s4goto0");
+                                        StartCoroutine(SendStringsToArduino());
 
                                         break;
 
@@ -10641,7 +10762,13 @@ public class PziLogic : MonoBehaviour
 
                                     case "0":
 
-                                        sendToArduino("off");
+                                        AllStringToSend.Add("off");
+                                        AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("s1goto0");
+                                        AllStringToSend.Add("s2goto0");
+                                        AllStringToSend.Add("s3goto0");
+                                        AllStringToSend.Add("s4goto0");
+                                        StartCoroutine(SendStringsToArduino());
 
                                         break;
 
@@ -10769,7 +10896,13 @@ public class PziLogic : MonoBehaviour
 
                                     case "0":
 
-                                        sendToArduino("off");
+                                        AllStringToSend.Add("off");
+                                        AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("s1goto0");
+                                        AllStringToSend.Add("s2goto0");
+                                        AllStringToSend.Add("s3goto0");
+                                        AllStringToSend.Add("s4goto0");
+                                        StartCoroutine(SendStringsToArduino());
 
                                         break;
 
@@ -10981,6 +11114,14 @@ public class PziLogic : MonoBehaviour
         if (Step == 0)
         {
             sendToArduino("s1goto70");
+        }
+        if (Step == 13)
+        {
+            sendToArduino("s1goto72");
+        }
+        if (Step == 21)
+        {
+            sendToArduino("s1goto74");
         }
     }
     public void LM3D3T3PZI13()
