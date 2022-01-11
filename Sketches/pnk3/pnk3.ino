@@ -39,6 +39,7 @@ HslColor hslBlack(black);
 TM1637_6D tm1637_6D(CLK,DIO);
 
 
+
 //#define STEPPER_SETUP // Раскомментировать для настройки
 //#define STEPPER_DEBUG //Раскомментировать для поиска ошибок
 
@@ -53,8 +54,8 @@ const byte stepperOptronPin[STEPPER_NUM] = {47}; // Пины оптронов
 String stepperSymbol = "s"; // Обозначение шаговых двигателей
 String stepperSymbolB = "r";
 
-#define STEPPER_ACCELERATION 8000 // Ускорение //-
-#define STEPPER_SPEED 800 // Скорость //-
+#define STEPPER_ACCELERATION 200 // Ускорение //-
+#define STEPPER_SPEED 100 // Скорость //-
 
 #define STEPPER_ACCELERATION_yst 400 // Ускорение //-
 #define STEPPER_SPEED_yst 200 // Скорость //-
@@ -341,7 +342,7 @@ pinMode(stepperOptronPin[i], INPUT);
 tm1637_6D.start();
   // You can set the brightness level from 0(darkest) till 7(brightest) or use one
   // of the predefined brightness levels below
-  tm1637_6D.set(BRIGHT_DARKEST);//BRIGHT_TYPICAL = 2,BRIGHT_DARKEST = 0,BRIGHTEST = 7;
+  //tm1637_6D.set(BRIGHT_DARKEST);//BRIGHT_TYPICAL = 2,BRIGHT_DARKEST = 0,BRIGHTEST = 7;
 
   
   ////                                                                            ////
@@ -410,7 +411,7 @@ tm1637_6D.start();
     else if (truePotPos[i] < potBorder[i][0]) {
       truePotPos[i] = potBorder[i][0];
     }
-    truePotPos[i] = (truePotPos[i] - potBorder[i][0]) / (potBorder[i][1] - potBorder[i][0]) * 1000;
+    truePotPos[i] = (truePotPos[i] - potBorder[i][0]) / (potBorder[i][1] - potBorder[i][0]) * 100;
     truePotPos[i] = (int)round(truePotPos[i]) / POTERROR * POTERROR;
     if (potType[i] == 1) {
       if (truePotPos[i] <= potRangeBorder[i][0]) {
@@ -861,7 +862,7 @@ void loop() {
       else if (truePotPos[i] < potBorder[i][0]) {
         truePotPos[i] = potBorder[i][0];
       }
-      truePotPos[i] = (truePotPos[i] - potBorder[i][0]) / (potBorder[i][1] - potBorder[i][0]) * 1000;
+      truePotPos[i] = (truePotPos[i] - potBorder[i][0]) / (potBorder[i][1] - potBorder[i][0]) * 100;
       truePotPos[i] = (int)round(truePotPos[i]) / POTERROR * POTERROR;
       if (potType[i] == 0) {
         if (oldTruePotPos[i] != truePotPos[i]) {
@@ -1052,7 +1053,7 @@ void loop() {
 
 
 if (str.substring(0, 3).equals("mon")) { // Принудительный опрос кнопки
-      float qwe =  str.substring(3, 15).toFloat();
+      float qwe =  str.substring(3, 8).toFloat();
       
       tm1637_6D.displayFloat(qwe);
       
