@@ -35,6 +35,13 @@ namespace DataFromXML
 
         private void ReceiveLessonNumber()
         {
+
+
+
+            LessonNumber = LessonNameList.Instatiate.Lesson_Name;
+
+            /*
+            
             bool hasElement = log.Descendants(xmlElement).Any();
             if (hasElement)
             {
@@ -55,6 +62,9 @@ namespace DataFromXML
                                ", атрибут  " + xmlAttribute + ", значение которого номер занятия.</color>");
 
             }
+
+
+            */
         }
     }
 }

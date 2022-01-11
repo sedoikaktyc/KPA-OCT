@@ -34,13 +34,13 @@ public class ListType : MonoBehaviour
             _nextBtn.gameObject.GetComponent<Button>().interactable = false;
               
                 _nextBtn.gameObject.GetComponentInChildren<Text>().text = "-";
-            yield return new WaitForSeconds(0.7f);
+            yield return new WaitForSeconds(0.05f);
             _nextBtn.gameObject.GetComponentInChildren<Text>().text = "- -";
-            yield return new WaitForSeconds(0.7f);
+            yield return new WaitForSeconds(0.05f);
             _nextBtn.gameObject.GetComponentInChildren<Text>().text = "- - -";
-            yield return new WaitForSeconds(0.7f);
+            yield return new WaitForSeconds(0.05f);
             LoginAndPassController.Instance.RefreshText();
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.1f);
             //_nextBtn.enabled = true;
             _nextBtn.gameObject.GetComponent<Button>().interactable = true;
             run = false;
@@ -107,9 +107,15 @@ public class ListType : MonoBehaviour
 
 
         xmlDoc.Save(Application.dataPath + "/Resources/XML/log.xml");
-       
+        xmlDoc = null;
+
+
+       LessonNameList.Instatiate.Lesson_Name = _pziNames[_dropdown.value];
+
+
 
 
         _nextBtn.enabled = true;
     }
 }
+
