@@ -142,8 +142,8 @@ const byte stepperOptronPin[STEPPER_NUM] = {37, 44}; // Пины оптроно�
 String stepperSymbol = "s"; // Обозначение шаговых двигателей
 String stepperSymbolB = "r";
 
-#define STEPPER_ACCELERATION 8000 // Ускорение //-
-#define STEPPER_SPEED 800 // Скорость //-
+#define STEPPER_ACCELERATION 200 // Ускорение //-
+#define STEPPER_SPEED 100 // Скорость //-
 
 #define STEPPER_ACCELERATION_yst 400 // Ускорение //-
 #define STEPPER_SPEED_yst 200 // Скорость //-

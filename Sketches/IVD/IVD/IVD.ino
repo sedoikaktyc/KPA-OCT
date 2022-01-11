@@ -300,12 +300,12 @@ Serial.println("complite");
   #endif
 
 /////////////////////////////////НАСТРОЙКИ МОНИТОРОВ/////////////////////////////////
-
   disp0.begin(); // ИЗМЕНИТЬ, ЕСЛИ ИЗМЕНИЛОСЬ КОЛИЧЕСТВО МОНИТОРОВ!
   disp1.begin();
   disp2.begin();
   disp3.begin();
   disp4.begin();
+
 
 /////////////////////////////////////////////////////////////////////////////////////
 
@@ -633,6 +633,7 @@ for (i = 0; i < razNUM; i++) { // Опрос потенциометров
         if(encType[i] == 4){
           encPos[i] = round(encPos[i] * 10);  // 100.0;
           encPosInt[i] = encPos[i];
+          
         }
         
       }
@@ -675,8 +676,11 @@ for (i = 0; i < razNUM; i++) { // Опрос потенциометров
     stepper[i].setMaxSpeed(STEPPER_SPEED);
     stepper[i].setSpeed(STEPPER_SPEED);
     stepper[i].setAcceleration(STEPPER_ACCELERATION);
+
+    
   }
 
+            
 }
 
 void loop() {
@@ -1024,14 +1028,14 @@ void loop() {
           encPosInt[i] = encPos[i];
         }
           
-          if(encPos[i] != oldEncPos[i]){
+          if(encPos[i] != oldEncPos[i] && encPos[i] - oldEncPos[i] != 10 && encPos[i] - oldEncPos[i] != -10){
             oldEncPos[i] = encPos[i];
             Serial.print("e");
             Serial.print("#");
             Serial.print(i);
             Serial.print("#");
             Serial.println(encPosInt[i]);
-            
+             
           }
         }
       }
@@ -1162,14 +1166,10 @@ void loop() {
       if (i == (STEPPER_NUM - 1))
       {
         Serial.println("stop");
-        disp0.displayInt(dconst[0]); // ИЗМЕНИТЬ, ЕСЛИ ИЗМЕНИЛОСЬ КОЛИЧЕСТВО МОНИТОРОВ!
-        disp1.displayInt(dconst[1]);
-        disp2.displayInt(dconst[2]);
-        disp3.displayInt(dconst[3]);
-        disp4.displayInt(dconst[4]);
+        
       }
 
-
+        
 
     }
 

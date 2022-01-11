@@ -66,6 +66,242 @@ public class PziLogic : MonoBehaviour
 
     }
 
+    IEnumerator _3_4_7_1()
+    {
+
+        {
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("off0");
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("on1");
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("s1goto150");
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("s5goto74");
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("s6goto74");
+            yield return new WaitForSeconds(2.0f);
+            sendToArduino("s1goto84");
+            yield return new WaitForSeconds(1.0f);
+            sendToArduino("off1");
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("on0");
+        }
+
+    }
+
+    IEnumerator _3_4_7_2()
+    {
+
+        {
+
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("s1goto0");
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("s2goto0");
+            yield return new WaitForSeconds(0.05f);
+            sendToArduino("s1goto84");
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("s2goto100");
+
+        }
+
+    }
+
+    IEnumerator _3_4_7_3()
+    {
+        
+        while (true)
+        {
+
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("s5goto74");
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("s6goto74");
+            yield return new WaitForSeconds(0.5f);
+            sendToArduino("s5goto100");
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("s6goto100");
+
+        }
+
+    }
+
+    private bool _3_4_7_3_bool;
+
+    IEnumerator _3_5_6_1()
+    {
+
+        {
+
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("s0goto0");
+            yield return new WaitForSeconds(1.0f);
+            sendToArduino("s0goto20");
+            
+
+        }
+
+    }
+
+    IEnumerator _3_5_1_1sh3()
+    {
+
+        {
+
+            yield return new WaitForSeconds(0.1f);
+            sendToArduino("s0goto-14400");
+            yield return new WaitForSeconds(40.0f);
+            sendToArduino("s1goto-14000");
+
+        }
+
+    }
+
+    IEnumerator _3_5_1_1sh5()
+    {
+
+        {
+
+            yield return new WaitForSeconds(0.1f);
+            sendToArduino("s1goto0");
+            yield return new WaitForSeconds(39.3f);
+            sendToArduino("s0goto-400");
+
+        }
+
+    }
+
+    IEnumerator _3_5_1_1sh28()
+    {
+
+        {
+            yield return new WaitForSeconds(0.1f);
+            sendToArduino("s1goto0");
+            yield return new WaitForSeconds(9.0f);
+            sendToArduino("s0goto-14160");
+
+        }
+
+    }
+
+    IEnumerator _3_5_1_1sh18()
+    {
+
+        {
+
+            yield return new WaitForSeconds(0.1f);
+            sendToArduino("s0goto-14400");
+            yield return new WaitForSeconds(1.0f);
+            sendToArduino("s1goto-2720");
+
+        }
+
+    }
+
+    IEnumerator _3_5_2_2sh7()
+    {
+
+        {
+
+            yield return new WaitForSeconds(0.1f);
+            sendToArduino("s0goto-14400");
+            yield return new WaitForSeconds(40.0f);
+            sendToArduino("s1goto-18080");
+
+        }
+
+    }
+
+    IEnumerator _3_5_3_1sh14()
+    {
+
+        {
+
+            yield return new WaitForSeconds(0.1f);
+            sendToArduino("s1goto0");
+            yield return new WaitForSeconds(18.0f);
+            sendToArduino("s0goto-400");
+
+        }
+
+    }
+
+    IEnumerator _3_5_3_1sh7()
+    {
+
+        {
+
+            yield return new WaitForSeconds(0.1f);
+            sendToArduino("s0goto-14400");
+            yield return new WaitForSeconds(40.0f);
+            sendToArduino("s1goto-15200");
+
+        }
+
+    }
+
+    IEnumerator _3_5_3_1sh15()
+    {
+
+        {
+
+            yield return new WaitForSeconds(0.1f);
+            sendToArduino("s0goto-14400");
+            yield return new WaitForSeconds(40.0f);
+            sendToArduino("s1goto-16000");
+
+        }
+
+    }
+
+    IEnumerator _3_5_3_1sh17()
+    {
+
+        {
+
+            yield return new WaitForSeconds(0.1f);
+            sendToArduino("s1goto0");
+            yield return new WaitForSeconds(46.0f);
+            sendToArduino("s0goto-400");
+
+        }
+
+    }
+
+    IEnumerator _3_5_2_2sh9()
+    {
+
+        {
+
+            yield return new WaitForSeconds(0.1f);
+            sendToArduino("s1goto0");
+            yield return new WaitForSeconds(50.2f);
+            sendToArduino("s0goto0");
+
+        }
+
+    }
+
+    IEnumerator lamp3473_on_off()
+    {
+
+
+        {
+            yield return new WaitForSeconds(0.1f);
+            sendToArduino("off0");
+            yield return new WaitForSeconds(0.1f);
+            sendToArduino("on1");
+            yield return new WaitForSeconds(1.0f);
+            sendToArduino("off1");
+            yield return new WaitForSeconds(0.1f);
+            sendToArduino("on0");
+        }
+
+
+
+    }
+
     IEnumerator lamp9_10_flashing()
     {
 
@@ -85,6 +321,8 @@ public class PziLogic : MonoBehaviour
 
 
     }
+
+    private bool lamp9_10_flashing_bool;
 
     IEnumerator lamp_3_3_3_13()
     {
@@ -121,6 +359,50 @@ public class PziLogic : MonoBehaviour
 
     }
 
+    private bool Lamp0_flashing_2600_bool;
+
+    IEnumerator Lamp3_flashing_2600()
+    {
+
+        while (true)
+        {
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("on1");
+            yield return new WaitForSeconds(1.0f);
+            sendToArduino("off1");
+            yield return new WaitForSeconds(1.0f);
+        }
+
+
+
+    }
+
+    private bool Lamp3_flashing_2600_bool;
+    
+
+    IEnumerator Lamp4_1_flashing_2600()
+    {
+
+        while (true)
+        {
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("on0");
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("on2");
+            yield return new WaitForSeconds(1.0f);
+            sendToArduino("off0");
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("off2");
+            yield return new WaitForSeconds(1.0f);
+        }
+
+
+
+    }
+
+    private bool Lamp4_1_flashing_2600_bool;
+    
+
     IEnumerator YellowLampSAS_flashing()
     {
 
@@ -140,6 +422,30 @@ public class PziLogic : MonoBehaviour
 
 
     }
+
+    private bool YellowLampSAS_flashing_bool;
+
+    IEnumerator RedLampSAS_flashing()
+    {
+
+        while (true)
+        {
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("on0");
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("on1");
+            yield return new WaitForSeconds(1.0f);
+            sendToArduino("off0");
+            yield return new WaitForSeconds(0.01f);
+            sendToArduino("off1");
+            yield return new WaitForSeconds(1.0f);
+        }
+
+
+
+    }
+
+    private bool RedLampSAS_flashing_bool;
 
     public void StartStepFunction(string pziName, int step)
     {
@@ -2986,24 +3292,28 @@ public class PziLogic : MonoBehaviour
                         {
 
                             case "3":
-                                // Debug.Log("ddddddddddddddddddd"); // Приходит
+                                
                                 switch (StrFromArduino[2])
 
                                 {
 
                                     case "12":
 
-                                        Debug.Log("ddddddddddddddddddd"); // Не приходит :(
-                                        sendToArduino("on22");
+                                        if (Step == 0)
+                                        { 
+                                            sendToArduino("on22");
+                                        }
 
                                         break;
 
                                     case "13":
 
-
-                                        AllStringToSend.Add("off22");
-                                        AllStringToSend.Add("on23");
-                                        StartCoroutine(SendStringsToArduino());
+                                        if (Step == 2)
+                                        { 
+                                            AllStringToSend.Add("off22");
+                                            AllStringToSend.Add("on23");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
 
                                         break;
 
@@ -3426,15 +3736,19 @@ public class PziLogic : MonoBehaviour
 
                                     case "1":
 
-                                        sendToArduino("off");
+                                        AllStringToSend.Add("off0");
+                                        AllStringToSend.Add("off1");
+                                        AllStringToSend.Add("off2");
+                                        AllStringToSend.Add("off3");
+                                        AllStringToSend.Add("off4");
+                                        AllStringToSend.Add("off5");
+                                        AllStringToSend.Add("off6");
+                                        AllStringToSend.Add("off23");
+                                        AllStringToSend.Add("off29");
+                                        StartCoroutine(SendStringsToArduino());
 
                                         break;
 
-                                    default:
-
-                                        sendToArduino("on20");
-
-                                        break;
 
 
                                 }
@@ -3452,13 +3766,13 @@ public class PziLogic : MonoBehaviour
                         {
 
                             case "0":
-
+                                
                                 switch (StrFromArduino[2])
 
                                 {
 
                                     case "1":
-
+                                       
                                         if (Step == 5)
                                         {
                                             AllStringToSend.Add("on0");
@@ -3580,6 +3894,81 @@ public class PziLogic : MonoBehaviour
 
                 break;
 
+            case "LM2D2T7PZI6":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        sendToArduino("on31");
+
+                                        break;
+
+                                    default:
+
+                                        sendToArduino("off31");
+
+                                        break;
+
+
+
+                                }
+
+                                break;
+
+
+                            case "1":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        sendToArduino("on30");
+
+                                        break;
+
+                                    default:
+
+                                        sendToArduino("off30");
+
+                                        break;
+
+
+
+
+                                }
+
+                                break;
+
+                            
+
+                        }
+
+                        break;
+
+                    
+
+                }
+
+                break;
+
             case "LM2D2T7PZI7":
 
 
@@ -3606,7 +3995,7 @@ public class PziLogic : MonoBehaviour
 
                                     default:
 
-                                        sendToArduino("off");
+                                        sendToArduino("off31");
 
 
                                         break;
@@ -3652,12 +4041,12 @@ public class PziLogic : MonoBehaviour
                                     case "1":
 
                                         sendToArduino("on9");
+
                                         break;
 
                                     default:
 
-                                        sendToArduino("off10");
-
+                                        sendToArduino("off9");
 
                                         break;
 
@@ -3705,7 +4094,7 @@ public class PziLogic : MonoBehaviour
 
                                     default:
 
-                                        sendToArduino("off");
+                                        sendToArduino("off31");
 
 
                                         break;
@@ -3849,10 +4238,47 @@ public class PziLogic : MonoBehaviour
 
                                     case "1":
 
-                                        sendToArduino("off");
+                                        if (Step == 6)
+                                        {
+                                            AllStringToSend.Add("off0");
+                                            AllStringToSend.Add("off1");
+                                            AllStringToSend.Add("off2");
+                                            AllStringToSend.Add("off6");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
+                                        
 
+                                        if (Step == 10)
+                                        {
+                                            AllStringToSend.Add("off0");
+                                            AllStringToSend.Add("off1");
+                                            AllStringToSend.Add("off2");
+                                            AllStringToSend.Add("off5");
+                                            AllStringToSend.Add("off6");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
+                                        
+
+                                        if (Step == 15)
+                                        {
+                                            AllStringToSend.Add("off0");
+                                            AllStringToSend.Add("off1");
+                                            AllStringToSend.Add("off2");
+                                            AllStringToSend.Add("off5");
+                                            AllStringToSend.Add("off6");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
+                                        
+
+                                        if (Step == 19)
+                                        { 
+                                            AllStringToSend.Add("off0");
+                                            AllStringToSend.Add("off1");
+                                            AllStringToSend.Add("off2");
+                                            AllStringToSend.Add("off6");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
                                         break;
-
 
                                 }
 
@@ -3864,7 +4290,7 @@ public class PziLogic : MonoBehaviour
 
                                 {
 
-                                    case "0":
+                                    case "1":
 
                                         if (Step == 7)
                                         {
@@ -3945,8 +4371,6 @@ public class PziLogic : MonoBehaviour
                                 }
 
                                 break;
-
-
 
 
 
@@ -4132,7 +4556,7 @@ public class PziLogic : MonoBehaviour
 
                                     case "1":
 
-                                        if (Step == 1)
+                                        if (Step == 3)
                                         {
                                             AllStringToSend.Add("on14");
                                             AllStringToSend.Add("on20");
@@ -4229,9 +4653,12 @@ public class PziLogic : MonoBehaviour
                                         break;
 
                                     default:
-
-                                        sendToArduino("off30");
-                                        StopCoroutine(lamp9_10_flashing());
+                                        
+                                        StopCoroutine(_coroutine);
+                                        AllStringToSend.Add("off30");
+                                        AllStringToSend.Add("off8");
+                                        AllStringToSend.Add("off9");
+                                        StartCoroutine(SendStringsToArduino());
 
                                         break;
 
@@ -4252,7 +4679,14 @@ public class PziLogic : MonoBehaviour
 
                                         if (Step == 1)
                                         {
-                                            StartCoroutine(lamp9_10_flashing());
+                                            if (!lamp9_10_flashing_bool)
+                                            {
+                                                _coroutine = StartCoroutine(lamp9_10_flashing());
+
+                                                lamp9_10_flashing_bool = true;
+                                            }
+
+                                            // StartCoroutine(lamp9_10_flashing());
                                         }
 
                                         break;
@@ -4356,8 +4790,36 @@ public class PziLogic : MonoBehaviour
 
                                     default:
 
-                                        AllStringToSend.Add("off");
-                                        AllStringToSend.Add("on7");
+                                        AllStringToSend.Add("off0");
+                                        AllStringToSend.Add("off1");
+                                        AllStringToSend.Add("off2");
+                                        AllStringToSend.Add("off3");
+                                        AllStringToSend.Add("off4");
+                                        AllStringToSend.Add("off5");
+                                        AllStringToSend.Add("off6");
+                                        AllStringToSend.Add("off8");
+                                        AllStringToSend.Add("off9");
+                                        AllStringToSend.Add("off10");
+                                        AllStringToSend.Add("off11");
+                                        AllStringToSend.Add("off12");
+                                        AllStringToSend.Add("off13");
+                                        AllStringToSend.Add("off14");
+                                        AllStringToSend.Add("off15");
+                                        AllStringToSend.Add("off16");
+                                        AllStringToSend.Add("off17");
+                                        AllStringToSend.Add("off18");
+                                        AllStringToSend.Add("off19");
+                                        AllStringToSend.Add("off20");
+                                        AllStringToSend.Add("off21");
+                                        AllStringToSend.Add("off22");
+                                        AllStringToSend.Add("off23");
+                                        AllStringToSend.Add("off24");
+                                        AllStringToSend.Add("off25");
+                                        AllStringToSend.Add("off26");
+                                        AllStringToSend.Add("off27");
+                                        AllStringToSend.Add("off28");
+                                        AllStringToSend.Add("off29");
+                                        AllStringToSend.Add("off0");
                                         StartCoroutine(SendStringsToArduino());
 
                                         break;
@@ -4373,7 +4835,7 @@ public class PziLogic : MonoBehaviour
 
                                 {
 
-                                    case "0":
+                                    case "1":
 
                                         if (Step == 11)
                                         {
@@ -4631,7 +5093,7 @@ public class PziLogic : MonoBehaviour
 
                         {
 
-                            case "5":
+                            case "3":
 
                                 switch (StrFromArduino[2])
 
@@ -4883,7 +5345,7 @@ public class PziLogic : MonoBehaviour
                                             AllStringToSend.Add("off3");
                                             AllStringToSend.Add("on0");
                                             AllStringToSend.Add("on2");
-                                            AllStringToSend.Add("s0goto76");
+                                            AllStringToSend.Add("s0goto78");
                                             StartCoroutine(SendStringsToArduino());
                                         }
 
@@ -4928,7 +5390,7 @@ public class PziLogic : MonoBehaviour
 
                                         if (Step == 4)
                                         {
-                                            sendToArduino("s0goto46");
+                                            sendToArduino("s0goto47");
                                         }
 
                                         break;
@@ -4937,7 +5399,7 @@ public class PziLogic : MonoBehaviour
 
                                         if (Step == 7)
                                         {
-                                            sendToArduino("s0goto106");
+                                            sendToArduino("s0goto110");
                                         }
 
                                         break;
@@ -4957,7 +5419,7 @@ public class PziLogic : MonoBehaviour
 
                                         if (Step == 5)
                                         {
-                                            sendToArduino("s0goto38");
+                                            sendToArduino("s0goto39");
                                         }
 
                                         break;
@@ -4966,7 +5428,7 @@ public class PziLogic : MonoBehaviour
 
                                         if (Step == 8)
                                         {
-                                            sendToArduino("s0goto114");
+                                            sendToArduino("s0goto118");
                                         }
 
                                         break;
@@ -4983,6 +5445,270 @@ public class PziLogic : MonoBehaviour
 
                         break;
 
+
+
+                }
+
+
+                break;
+
+            case "LM2D2T8PZI3":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "e":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "2":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "4":
+
+                                            AllStringToSend.Add("off0");
+                                            AllStringToSend.Add("on4");
+                                            StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                    case "0":
+                                        
+                                            AllStringToSend.Add("off4");
+                                            AllStringToSend.Add("on0");
+                                            StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+                            case "1":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "4":
+
+                                        if (Step == 7)
+                                        {
+                                            AllStringToSend.Add("off3");
+                                            AllStringToSend.Add("s0goto69");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
+
+                                        break;
+
+                                    case "3":
+
+                                        if (Step == 7)
+                                        {
+                                            AllStringToSend.Add("off1");
+                                            AllStringToSend.Add("s0goto61");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
+
+                                        break;
+
+                                    case "2":
+
+                                        if (Step == 7)
+                                        {
+                                            AllStringToSend.Add("on0");
+                                            AllStringToSend.Add("s0goto54");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
+
+                                        if (Step == 15)
+                                        {
+                                            AllStringToSend.Add("off1");
+                                            AllStringToSend.Add("on0");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
+
+                                        break;
+
+                                    case "1":
+
+                                        if (Step == 7)
+                                        {
+                                            sendToArduino("s0goto46");
+                                        }
+
+                                        break;
+
+                                    case "0":
+
+                                        if (Step == 7)
+                                        {
+                                            AllStringToSend.Add("on2");
+                                            AllStringToSend.Add("s0goto39");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
+
+                                        break;
+
+                                    case "6":
+
+                                        if (Step == 10)
+                                        {
+                                            sendToArduino("off2");
+                                        }
+
+                                        break;
+
+                                    case "8":
+
+                                        if (Step == 12)
+                                        {
+                                            
+                                            
+                                           
+                                            if (!Lamp3_flashing_2600_bool)
+                                            {
+                                                _coroutine = StartCoroutine(Lamp3_flashing_2600());
+                                                
+                                                Lamp3_flashing_2600_bool = true;
+                                            }
+                                        }
+
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "5":
+
+                                        if (Step == 9)
+                                        {
+                                            AllStringToSend.Add("off0");
+                                            AllStringToSend.Add("s0goto79");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
+
+                                        break;
+
+                                    case "4":
+
+                                        if (Step == 9)
+                                        {
+                                            sendToArduino("s0goto69");
+                                        }
+
+                                        break;
+
+                                    case "3":
+
+                                        if (Step == 9)
+                                        {
+                                            sendToArduino("s0goto61");
+                                        }
+
+                                        break;
+
+                                    case "2":
+
+                                        if (Step == 9)
+                                        {
+                                            sendToArduino("s0goto54");
+                                        }
+
+                                        break;
+
+                                    case "1":
+
+                                        if (Step == 9)
+                                        {
+                                            sendToArduino("s0goto46");
+                                        }
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+                        }
+
+                        break;
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        if (Step == 16)
+                                        {
+                                           
+                                            if (!Lamp4_1_flashing_2600_bool)
+                                            {
+                                                _coroutine = StartCoroutine(Lamp4_1_flashing_2600());
+
+                                                Lamp4_1_flashing_2600_bool = true;
+                                            }
+                                        }
+
+                                        break;
+
+                                    case "0":
+
+                                        if (Step == 14)
+                                        {
+                                            StopCoroutine(_coroutine);
+                                            sendToArduino("on1");
+                                            
+                                        }
+
+                                        if (Step == 18)
+                                        {
+                                            StopCoroutine(_coroutine);
+                                            AllStringToSend.Add("on2");
+                                            AllStringToSend.Add("on0");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+
+                        }
+
+                        break;
 
 
                 }
@@ -5072,15 +5798,24 @@ public class PziLogic : MonoBehaviour
                                 {
 
                                     case "1":
+                                        if (Step == 9)
+                                        {
+                                            if (!Lamp0_flashing_2600_bool)
+                                            {
+                                                _coroutine = StartCoroutine(Lamp0_flashing_2600());
 
-                                        StartCoroutine(Lamp0_flashing_2600());
+                                                Lamp0_flashing_2600_bool = true;
+                                            }
+                                        }
 
                                         break;
 
                                     case "0":
-
-                                        StopCoroutine(Lamp0_flashing_2600());
-
+                                        if (Step == 12)
+                                        {
+                                            StopCoroutine(_coroutine);
+                                            sendToArduino("on0");
+                                        }
                                         break;
 
 
@@ -5129,8 +5864,8 @@ public class PziLogic : MonoBehaviour
 
                                     default:
 
+                                        StopCoroutine(_coroutine);
                                         sendToArduino("off");
-                                        StopCoroutine(YellowLampSAS_flashing());
 
                                         break;
 
@@ -5166,7 +5901,14 @@ public class PziLogic : MonoBehaviour
                                             AllStringToSend.Add("on6");
                                             AllStringToSend.Add("on16");
                                             StartCoroutine(SendStringsToArduino());
-                                            StartCoroutine(YellowLampSAS_flashing());
+                                            
+                                            if (!YellowLampSAS_flashing_bool)
+                                            {
+                                                _coroutine = StartCoroutine(YellowLampSAS_flashing());
+
+                                                YellowLampSAS_flashing_bool = true;
+                                            }
+
                                         }
 
                                         if (Step == 13)
@@ -5452,6 +6194,150 @@ public class PziLogic : MonoBehaviour
 
                 break;
 
+            case "LM3D2T5PZI3":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "4":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        sendToArduino("on17");
+                                        if (!RedLampSAS_flashing_bool)
+                                        {
+                                            _coroutine = StartCoroutine(RedLampSAS_flashing());
+
+                                            RedLampSAS_flashing_bool = true;
+                                        }
+
+                                        break;
+
+                                    default:
+
+                                        StopCoroutine(_coroutine);
+                                        AllStringToSend.Add("off");
+                                        AllStringToSend.Add("s0goto0");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+
+
+                                }
+
+                                break;
+
+
+
+
+                        }
+
+                        break;
+
+                    case "e":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "2":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "3":
+
+                                        if (Step == 4)
+                                        {
+                                            sendToArduino("s0goto69");
+                                        }
+
+                                        break;
+
+                                    case "2":
+
+                                        if (Step == 8)
+                                        {
+                                            sendToArduino("s0goto7");
+                                        }
+
+                                        break;
+
+                                }
+
+                                break;
+
+
+                        }
+
+                        break;
+
+                    case "t":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "1":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "0":
+
+                                        if (Step == 15)
+                                        {
+                                            StopCoroutine(_coroutine);
+                                            AllStringToSend.Add("off0");
+                                            AllStringToSend.Add("off1");
+                                            StartCoroutine(SendStringsToArduino());
+
+                                            if (!YellowLampSAS_flashing_bool)
+                                            {
+                                                _coroutine = StartCoroutine(YellowLampSAS_flashing());
+
+                                                YellowLampSAS_flashing_bool = true;
+                                            }
+
+                                        }
+
+                                        break;
+
+
+
+
+                                }
+
+                                break;
+
+
+
+
+                        }
+
+                        break;
+
+
+                }
+
+
+                break;
+
 
 
             case "LM3D3T3PZI1":
@@ -5628,7 +6514,7 @@ public class PziLogic : MonoBehaviour
 
                                                 AllStringToSend.Add("on0");
                                                 AllStringToSend.Add("on1");
-                                                AllStringToSend.Add("s0goto11");
+                                                AllStringToSend.Add("s0goto121");
 
 
 
@@ -5786,7 +6672,7 @@ public class PziLogic : MonoBehaviour
                                     case 4:
 
 
-                                        sendToArduino("s0goto130");
+                                        sendToArduino("s0goto131");
 
 
                                         break;
@@ -5841,7 +6727,7 @@ public class PziLogic : MonoBehaviour
                                         {
 
 
-                                            sendToArduino("s0goto" + map(Convert.ToInt32(StrFromArduino[2]), 0, 480, 0, 98));
+                                            sendToArduino("s0goto" + map(Convert.ToInt32(StrFromArduino[2]), 0, 480, 0, 97));
                                             //AllStringToSend.Add("s0goto" + map(Convert.ToInt32(StrFromArduino[2]), 0, 480, 0, 98));
 
 
@@ -5878,7 +6764,7 @@ public class PziLogic : MonoBehaviour
                                         if (Step == 22)
                                         {
 
-                                            sendToArduino("s0goto" + map(Convert.ToInt32(StrFromArduino[2]), 0, 500, 98, 100));
+                                            sendToArduino("s0goto" + map(Convert.ToInt32(StrFromArduino[2]), 0, 500, 98, 101));
                                             //AllStringToSend.Add("s0goto" + map(Convert.ToInt32(StrFromArduino[2]), 0, 500, 98, 100));
                                             // StartCoroutine(SendStringsToArduino());
                                         }
@@ -5944,8 +6830,23 @@ public class PziLogic : MonoBehaviour
                                     case 2:
                                         sendToArduino("s0goto0");
                                         break;
+
                                 }
                                 break;
+
+                            case "3":
+                                switch (Convert.ToInt32(StrFromArduino[2]))
+                                {
+                                    case 18:
+                                        sendToArduino("s1goto68");
+                                        break;
+                                    default:
+                                        sendToArduino("s1goto70");
+                                        break;
+
+                                }
+                                break;
+
                         }
                         break;
                     case "p":
@@ -6038,6 +6939,29 @@ public class PziLogic : MonoBehaviour
                                         break;
                                 }
                                 break;
+
+                            case "2":
+                                switch (Convert.ToInt32(StrFromArduino[2]))
+                                {
+
+                                    case 18:
+                                        sendToArduino("s1goto67");
+                                        break;
+
+                                    case 20:
+                                        sendToArduino("s1goto67");
+                                        break;
+
+                                    case 2:
+                                        sendToArduino("s1goto67");
+                                        break;
+
+                                    default:
+                                        sendToArduino("s1goto70");
+                                        break;
+                                }
+                                break;
+
                         }
                         break;
 
@@ -6107,7 +7031,6 @@ public class PziLogic : MonoBehaviour
                 }
                 break;
 
-
             case "LM3D3T3PZI4":
 
 
@@ -6123,14 +7046,42 @@ public class PziLogic : MonoBehaviour
                                     case "1":
                                         AllStringToSend.Add("on1");
                                         AllStringToSend.Add("on3");
-                                        AllStringToSend.Add("s0goto11");
+                                        AllStringToSend.Add("s0goto150");
                                         StartCoroutine(SendStringsToArduino());
                                         break;
                                     default:
                                         AllStringToSend.Add("off1");
                                         AllStringToSend.Add("off3");
                                         AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("mon0");
                                         StartCoroutine(SendStringsToArduino());
+                                        break;
+                                }
+                                break;
+                            case "17":
+                                switch (StrFromArduino[2])
+
+                                {
+                                    case "1":
+                                        sendToArduino("mon-4095");
+                                        break;
+                                    default:
+                                        sendToArduino("mon0");
+                                        break;
+                                }
+                                break;
+                        }
+                        break;
+
+                    case "e":
+                        switch (StrFromArduino[1])
+                        {
+                            case "0":
+                                switch (StrFromArduino[2])
+
+                                {
+                                    case "4":
+                                        sendToArduino("s0goto140");
                                         break;
                                 }
                                 break;
@@ -6161,20 +7112,30 @@ public class PziLogic : MonoBehaviour
                                         break;
                                 }
                                 break;
+                            case "0":
+                                switch (StrFromArduino[2])
+
+                                {
+                                    case "0":
+                                        sendToArduino("mon0");
+                                        break;
+                                    
+                                }
+                                break;
                         }
                         break;
 
                     case "p":
                         switch (StrFromArduino[1])
                         {
-                            case "0":
+                            case "1":
                                 switch (StrFromArduino[2])
 
                                 {
                                     default:
 
 
-                                        sendToArduino("mon" + map(Convert.ToInt32(StrFromArduino[2]), 0, 1000, 2044, 2024));
+                                        sendToArduino("mon" + map(Convert.ToInt32(StrFromArduino[2]), 50, 0, 2044, 2024));
 
                                         break;
                                 }
@@ -6205,6 +7166,17 @@ public class PziLogic : MonoBehaviour
                                         break;
                                 }
                                 break;
+                            case "0":
+                                switch (StrFromArduino[2])
+
+                                {
+                                    case "0":
+                                        sendToArduino("mon0");
+                                        break;
+
+                                }
+                                break;
+
                         }
                         break;
 
@@ -6226,12 +7198,13 @@ public class PziLogic : MonoBehaviour
                                 {
                                     case "1":
 
-                                        AllStringToSend.Add("s0goto11");
+                                        AllStringToSend.Add("s0goto150");
                                         StartCoroutine(SendStringsToArduino());
                                         break;
                                     default:
 
                                         AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("mon0");
                                         StartCoroutine(SendStringsToArduino());
                                         break;
                                 }
@@ -6254,14 +7227,14 @@ public class PziLogic : MonoBehaviour
                     case "p":
                         switch (StrFromArduino[1])
                         {
-                            case "0":
+                            case "1":
                                 switch (StrFromArduino[2])
 
                                 {
                                     default:
 
 
-                                        sendToArduino("mon" + map(Convert.ToInt32(StrFromArduino[2]), 0, 1000, 2021, 2018));
+                                        sendToArduino("mon" + map(Convert.ToInt32(StrFromArduino[2]), 50, 0, 2021, 2018));
 
                                         break;
                                 }
@@ -6295,6 +7268,16 @@ public class PziLogic : MonoBehaviour
                                         break;
                                 }
                                 break;
+                            case "0":
+                                switch (StrFromArduino[2])
+
+                                {
+                                    case "0":
+                                        sendToArduino("mon0");
+                                        break;
+
+                                }
+                                break;
                         }
                         break;
 
@@ -6323,6 +7306,16 @@ public class PziLogic : MonoBehaviour
                                         break;
                                 }
                                 break;
+                            case "0":
+                                switch (StrFromArduino[2])
+
+                                {
+                                    case "0":
+                                        sendToArduino("mon0");
+                                        break;
+
+                                }
+                                break;
                         }
                         break;
 
@@ -6335,7 +7328,7 @@ public class PziLogic : MonoBehaviour
 
                 switch (StrFromArduino[0])
                 {
-                    
+
                     case "b":
                         switch (StrFromArduino[1])
                         {
@@ -6357,17 +7350,18 @@ public class PziLogic : MonoBehaviour
                                 {
                                     case "1":
 
-                                        AllStringToSend.Add("s0goto11");
+                                        AllStringToSend.Add("s0goto150");
                                         StartCoroutine(SendStringsToArduino());
                                         break;
                                     default:
 
                                         AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("mon0");
                                         StartCoroutine(SendStringsToArduino());
                                         break;
                                 }
                                 break;
-                            
+
                         }
                         break;
 
@@ -6375,11 +7369,3733 @@ public class PziLogic : MonoBehaviour
                 }
                 break;
 
+            case "LM3D4T6PZI1":
 
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "e":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "13":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        
+                                            sendToArduino("on0");
+                                        
+
+                                        break;
+
+                                    case "2":
+
+                                        
+                                            AllStringToSend.Add("off0");
+                                            AllStringToSend.Add("on0");
+                                            StartCoroutine(SendStringsToArduino());
+                                        
+
+                                        break;
+
+                                    case "3":
+
+                                        
+                                            AllStringToSend.Add("off0");
+                                            AllStringToSend.Add("on0");
+                                            StartCoroutine(SendStringsToArduino());
+                                        
+
+                                        break;
+
+                                    case "4":
+
+                                        
+                                            AllStringToSend.Add("off0");
+                                            AllStringToSend.Add("on0");
+                                            StartCoroutine(SendStringsToArduino());
+                                        
+
+                                        break;
+
+                                    case "0":
+
+                                        
+                                            sendToArduino("off0");
+                                        
+
+                                        break;
+
+                                }
+
+                                break;
+
+
+
+
+
+                        }
+
+                        break;
+
+
+
+                }
+
+
+                break;
+
+            case "LM3D2T6PZI1":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "t":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "2":
+
+
+                                        AllStringToSend.Add("on0");
+                                        AllStringToSend.Add("s1goto149");
+                                        StartCoroutine(SendStringsToArduino());
+
+
+                                        break;
+
+                                    case "0":
+
+
+                                        AllStringToSend.Add("off0");
+                                        AllStringToSend.Add("s1goto0");
+                                        StartCoroutine(SendStringsToArduino());
+
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+                            case "1":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "2":
+
+
+                                        sendToArduino("on1");
+
+
+                                        break;
+
+                                    case "0":
+
+
+                                        sendToArduino("off1");
+
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+                    case "e":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "0":
+
+
+                                        AllStringToSend.Add("off1");
+                                        AllStringToSend.Add("on1");
+                                        StartCoroutine(SendStringsToArduino());
+
+
+                                        break;
+
+                                    case "1":
+
+
+                                        AllStringToSend.Add("off1");
+                                        AllStringToSend.Add("on1");
+                                        StartCoroutine(SendStringsToArduino());
+
+
+                                        break;
+
+                                    case "2":
+
+
+                                        AllStringToSend.Add("off1");
+                                        AllStringToSend.Add("on1");
+                                        StartCoroutine(SendStringsToArduino());
+
+
+                                        break;
+
+                                    case "3":
+
+
+                                        AllStringToSend.Add("off1");
+                                        AllStringToSend.Add("on1");
+                                        StartCoroutine(SendStringsToArduino());
+
+
+                                        break;
+
+                                    case "4":
+
+
+                                        AllStringToSend.Add("off1");
+                                        AllStringToSend.Add("on1");
+                                        StartCoroutine(SendStringsToArduino());
+
+
+                                        break;
+
+                                    case "5":
+
+
+                                        AllStringToSend.Add("off1");
+                                        AllStringToSend.Add("on1");
+                                        StartCoroutine(SendStringsToArduino());
+
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+
+                }
+
+
+                break;
+
+            case "LM3D2T6PZI2":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "t":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "2":
+
+
+                                        AllStringToSend.Add("on0");
+                                        AllStringToSend.Add("s1goto149");
+                                        StartCoroutine(SendStringsToArduino());
+
+
+                                        break;
+
+                                    case "0":
+
+
+                                        AllStringToSend.Add("off0");
+                                        AllStringToSend.Add("s1goto0");
+                                        StartCoroutine(SendStringsToArduino());
+
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+                    case "p":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "0":
+
+
+                                        sendToArduino("s0goto0");
+
+
+                                        break;
+
+                                    case "1":
+
+
+                                        sendToArduino("s0goto20");
+
+
+                                        break;
+
+                                    
+
+                                    case "2":
+
+
+                                        sendToArduino("s0goto40");
+
+
+                                        break;
+
+                                    
+
+                                    case "3":
+
+
+                                        sendToArduino("s0goto60");
+
+
+                                        break;
+
+                                    
+
+                                    
+
+                                    case "4":
+
+
+                                        AllStringToSend.Add("off1");
+                                        AllStringToSend.Add("s0goto80");
+                                        StartCoroutine(SendStringsToArduino());
+
+
+                                        break;
+
+                                    case "5":
+
+
+                                        AllStringToSend.Add("on1");
+                                        AllStringToSend.Add("s0goto102");
+                                        StartCoroutine(SendStringsToArduino());
+
+
+                                        break;
+
+                                    
+
+                                    case "6":
+
+
+                                        sendToArduino("s0goto120");
+
+
+                                        break;
+
+                                    
+
+                                    case "7":
+
+
+                                        sendToArduino("s0goto140");
+
+
+                                        break;
+
+                                    
+
+                                    case "8":
+
+
+                                        sendToArduino("s0goto160");
+
+
+                                        break;
+
+                                    
+
+                                    case "9":
+
+
+                                        sendToArduino("s0goto180");
+
+
+                                        break;
+
+                                    
+
+                                    case "10":
+
+
+                                        sendToArduino("s0goto205");
+
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+
+                }
+
+
+                break;
+
+            case "LM3D2T6PZI3":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "t":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "2":
+
+
+                                        AllStringToSend.Add("on0");
+                                        AllStringToSend.Add("s1goto149");
+                                        StartCoroutine(SendStringsToArduino());
+
+
+                                        break;
+
+                                    case "0":
+
+
+                                        AllStringToSend.Add("off0");
+                                        AllStringToSend.Add("s1goto0");
+                                        StartCoroutine(SendStringsToArduino());
+
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+                            case "2":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "0":
+
+
+                                        sendToArduino("s0goto0");
+
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+                        }
+
+                        break;
+
+                    case "p":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "0":
+
+
+                                        sendToArduino("s0goto0");
+
+
+                                        break;
+
+                                    case "1":
+
+
+                                        sendToArduino("s0goto20");
+
+
+                                        break;
+
+
+
+                                    case "2":
+
+
+                                        sendToArduino("s0goto40");
+
+
+                                        break;
+
+
+
+                                    case "3":
+
+
+                                        sendToArduino("s0goto60");
+
+
+                                        break;
+
+
+
+
+
+                                    case "4":
+
+
+                                        sendToArduino("s0goto80");
+
+
+                                        break;
+
+                                    case "5":
+
+
+                                        sendToArduino("s0goto102");
+
+
+                                        break;
+
+
+
+                                    case "6":
+
+
+                                        sendToArduino("s0goto120");
+
+
+                                        break;
+
+
+
+                                    case "7":
+
+
+                                        sendToArduino("s0goto140");
+
+
+                                        break;
+
+
+
+                                    case "8":
+
+
+                                        sendToArduino("s0goto160");
+
+
+                                        break;
+
+
+
+                                    case "9":
+
+
+                                        sendToArduino("s0goto180");
+
+
+                                        break;
+
+
+
+                                    case "10":
+
+
+                                        sendToArduino("s0goto205");
+
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+
+                }
+
+
+                break;
+
+            case "LM3D5T5PZI1":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "t":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+
+                                        sendToArduino("on0");
+
+
+                                        break;
+
+                                    case "2":
+
+
+                                        sendToArduino("on");
+
+
+                                        break;
+
+                                    case "0":
+
+
+                                        sendToArduino("off");
+
+
+                                        break;
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+                    case "p":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "1":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "10":
+
+                                        if (Step == 6)
+                                        {
+                                            sendToArduino("s0goto205");
+                                        }
+
+                                        break;
+
+                                    case "9":
+
+                                        if (Step == 6)
+                                        {
+                                            sendToArduino("s0goto180");
+                                        }
+
+                                        break;
+
+                                    case "8":
+
+                                        if (Step == 6)
+                                        {
+                                            sendToArduino("s0goto160");
+                                        }
+
+                                        break;
+
+                                    case "7":
+
+                                        if (Step == 6)
+                                        {
+                                            sendToArduino("s0goto140");
+                                        }
+
+                                        break;
+
+                                    case "6":
+
+                                        if (Step == 6)
+                                        {
+                                            sendToArduino("s0goto120");
+                                        }
+
+                                        break;
+
+                                    case "5":
+
+                                        if (Step == 6)
+                                        {
+                                            sendToArduino("s0goto100");
+                                        }
+
+                                        break;
+
+                                    case "4":
+
+                                        if (Step == 6)
+                                        {
+                                            sendToArduino("s0goto80");
+                                        }
+
+                                        break;
+
+                                    case "3":
+
+                                        if (Step == 6)
+                                        {
+                                            sendToArduino("s0goto60");
+                                        }
+
+                                        break;
+
+                                    case "2":
+
+                                        if (Step == 6)
+                                        {
+                                            sendToArduino("s0goto40");
+                                        }
+
+                                        break;
+
+                                    case "1":
+
+                                        if (Step == 6)
+                                        {
+                                            sendToArduino("s0goto20");
+                                        }
+
+                                        break;
+
+
+
+                                }
+
+                                break;
+
+                            case "3":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "10":
+                                        
+                                            sendToArduino("s0goto0");
+
+                                        break;
+
+                                    case "9":
+
+                                            sendToArduino("s0goto20");
+
+                                        break;
+
+                                    case "8":
+
+                                            sendToArduino("s0goto40");
+
+                                        break;
+
+                                    case "7":
+
+                                            sendToArduino("s0goto60");
+
+                                        break;
+
+                                    case "6":
+
+                                            sendToArduino("s0goto80");
+
+                                        break;
+
+                                    case "5":
+
+                                            sendToArduino("s0goto100");
+
+                                        break;
+
+                                    case "4":
+
+                                            sendToArduino("s0goto120");
+
+                                        break;
+
+                                    case "3":
+
+                                            sendToArduino("s0goto140");
+
+                                        break;
+
+                                    case "2":
+
+                                            sendToArduino("s0goto160");
+
+                                        break;
+
+                                    case "1":
+
+                                            sendToArduino("s0goto180");
+
+                                        break;
+
+
+
+                                }
+
+                                break;
+
+
+                        }
+
+                        break;
+
+
+                }
+
+
+                break;
+
+            case "LM3D5T5PZI2":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "t":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+
+                                        sendToArduino("on0");
+
+
+                                        break;
+
+                                    case "2":
+
+
+                                        sendToArduino("on");
+
+
+                                        break;
+
+                                    case "0":
+
+
+                                        sendToArduino("off");
+
+
+                                        break;
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+                    case "p":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "2":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "10":
+
+                                        if (Step == 7)
+                                        {
+                                            sendToArduino("s0goto205");
+                                        }
+
+                                        break;
+
+                                    case "9":
+
+                                        if (Step == 7)
+                                        {
+                                            sendToArduino("s0goto180");
+                                        }
+
+                                        break;
+
+                                    case "8":
+
+                                        if (Step == 7)
+                                        {
+                                            sendToArduino("s0goto160");
+                                        }
+
+                                        break;
+
+                                    case "7":
+
+                                        if (Step == 7)
+                                        {
+                                            sendToArduino("s0goto140");
+                                        }
+
+                                        break;
+
+                                    case "6":
+
+                                        if (Step == 7)
+                                        {
+                                            sendToArduino("s0goto120");
+                                        }
+
+                                        break;
+
+                                    case "5":
+
+                                        if (Step == 7)
+                                        {
+                                            sendToArduino("s0goto100");
+                                        }
+
+                                        break;
+
+                                    case "4":
+
+                                        if (Step == 7)
+                                        {
+                                            sendToArduino("s0goto80");
+                                        }
+
+                                        break;
+
+                                    case "3":
+
+                                        if (Step == 7)
+                                        {
+                                            sendToArduino("s0goto60");
+                                        }
+
+                                        break;
+
+                                    case "2":
+
+                                        if (Step == 7)
+                                        {
+                                            sendToArduino("s0goto40");
+                                        }
+
+                                        break;
+
+                                    case "1":
+
+                                        if (Step == 7)
+                                        {
+                                            sendToArduino("s0goto20");
+                                        }
+
+                                        break;
+
+
+
+                                }
+
+                                break;
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "10":
+
+                                        sendToArduino("s0goto0");
+
+                                        break;
+
+                                    case "9":
+
+                                        sendToArduino("s0goto20");
+
+                                        break;
+
+                                    case "8":
+
+                                        sendToArduino("s0goto40");
+
+                                        break;
+
+                                    case "7":
+
+                                        sendToArduino("s0goto60");
+
+                                        break;
+
+                                    case "6":
+
+                                        sendToArduino("s0goto80");
+
+                                        break;
+
+                                    case "5":
+
+                                        sendToArduino("s0goto100");
+
+                                        break;
+
+                                    case "4":
+
+                                        sendToArduino("s0goto120");
+
+                                        break;
+
+                                    case "3":
+
+                                        sendToArduino("s0goto140");
+
+                                        break;
+
+                                    case "2":
+
+                                        sendToArduino("s0goto160");
+
+                                        break;
+
+                                    case "1":
+
+                                        sendToArduino("s0goto180");
+
+                                        break;
+
+
+
+                                }
+
+                                break;
+
+
+                        }
+
+                        break;
+
+
+                }
+
+
+                break;
+
+            case "LM3D2T8PZI1":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "1":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        sendToArduino("on0");
+
+                                        break;
+
+                                    default:
+
+                                        sendToArduino("off0");
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        sendToArduino("off1");
+
+                                        break;
+
+                                    default:
+
+                                        sendToArduino("on1");
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+                    case "p":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "80":
+
+                                        if (Step == 8)
+                                        {
+                                            sendToArduino("on1");
+                                        }
+
+                                        break;
+
+                                    default:
+
+                                        sendToArduino("off1");
+
+                                        break;
+
+
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+                    case "e":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "3":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "5":
+
+                                        if (Step == 12)
+                                        {
+                                            sendToArduino("on1");
+                                        }
+
+                                        break;
+
+                                    default:
+
+                                        if (Step == 14)
+                                        {
+                                            sendToArduino("off1");
+                                        }
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+                            case "4":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "8":
+
+                                        if (Step == 16)
+                                        {
+                                            sendToArduino("on1");
+                                        }
+
+                                        break;
+
+                                    default:
+
+                                        if (Step == 16)
+                                        {
+                                            sendToArduino("off1");
+                                        }
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+
+                }
+
+                break;
+
+            case "LM3D2T8PZI2":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "1":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        sendToArduino("on0");
+
+                                        break;
+
+                                    default:
+
+                                        sendToArduino("off0");
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        sendToArduino("off1");
+
+                                        break;
+
+                                    default:
+
+                                        sendToArduino("on1");
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+                    case "p":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "80":
+
+                                        if (Step == 4)
+                                        {
+                                            sendToArduino("on1");
+                                        }
+
+                                        break;
+
+                                    default:
+
+                                        sendToArduino("off1");
+
+                                        break;
+
+
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+                    case "e":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "3":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "2":
+
+                                        if (Step == 8)
+                                        {
+                                            sendToArduino("on1");
+                                        }
+
+                                        break;
+
+                                    default:
+
+                                        if (Step == 8)
+                                        {
+                                            sendToArduino("off1");
+                                        }
+
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "4":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        if (Step == 10)
+                                        {
+                                            sendToArduino("off1");
+                                        }
+
+                                        break;
+
+                                    case "6":
+
+                                        if (Step == 12)
+                                        {
+                                            sendToArduino("on1");
+                                        }
+
+                                        break;
+
+                                    default:
+
+                                        if (Step == 12)
+                                        {
+                                            sendToArduino("off1");
+                                        }
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+
+                }
+
+                break;
+
+            case "LM3D2T8PZI3":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        if (Step == 4)
+                                        {
+                                            sendToArduino("off0");
+                                        }
+
+                                        if (Step == 12)
+                                        {
+                                            sendToArduino("off1");
+                                        }
+
+                                        break;
+
+                                    case "0":
+
+                                        if (Step == 9)
+                                        {
+                                            sendToArduino("off0");
+                                        }
+
+                                        if (Step == 16)
+                                        {
+                                            sendToArduino("off1");
+                                        }
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+                    case "p":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "80":
+
+                                        if (Step == 3)
+                                        {
+                                            AllStringToSend.Add("on1");
+                                            AllStringToSend.Add("on0");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
+
+                                        if (Step == 11)
+                                        {
+                                            sendToArduino("off0");
+                                        }
+
+                                        break;
+
+                                    case "60":
+
+                                        AllStringToSend.Add("off1");
+                                        AllStringToSend.Add("off0");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                    case "100":
+
+                                        if (Step == 3)
+                                        {
+                                            AllStringToSend.Add("off1");
+                                            AllStringToSend.Add("off0");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
+
+                                        if (Step == 11)
+                                        {
+                                            sendToArduino("on0");
+                                        }
+
+                                        break;
+
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+                    case "e":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "4":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "0":
+
+                                        if (Step == 7)
+                                        {
+                                            sendToArduino("on0");
+                                        }
+
+                                        break;
+
+                                    case "6":
+
+                                        if (Step == 15)
+                                        {
+                                            sendToArduino("on1");
+                                        }
+
+                                        break;
+
+                                    default:
+
+                                        if (Step == 7)
+                                        {
+                                            sendToArduino("off0");
+                                        }
+
+                                        if (Step == 15)
+                                        {
+                                            sendToArduino("off1");
+                                        }
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+
+                }
+
+                break;
+
+            case "LM3D2T8PZI4":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        if (Step == 8)
+                                        {
+                                            sendToArduino("off0");
+                                        }
+
+                                        if (Step == 10)
+                                        {
+                                            sendToArduino("on1");
+                                        }
+
+                                        break;
+
+                                    default:
+
+                                        if (Step == 8)
+                                        {
+                                            sendToArduino("on0");
+                                        }
+
+                                        if (Step == 10)
+                                        {
+                                            sendToArduino("off1");
+                                        }
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+                        }
+
+                        break;
+
+                    case "p":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "80":
+
+                                        if (Step == 7)
+                                        {
+                                            AllStringToSend.Add("on1");
+                                            AllStringToSend.Add("on0");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
+
+                                        break;
+
+                                    case "60":
+
+                                        AllStringToSend.Add("off1");
+                                        AllStringToSend.Add("off0");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                    case "100":
+
+                                        if (Step == 7)
+                                        {
+                                            AllStringToSend.Add("off1");
+                                            AllStringToSend.Add("off0");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+                        }
+
+                        break;
+
+                    case "e":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "4":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "3":
+
+                                        if (Step == 9)
+                                        {
+                                            sendToArduino("on0");
+                                        }
+
+                                        break;
+
+                                    default:
+
+                                        if (Step == 9)
+                                        {
+                                            sendToArduino("off0");
+                                        }
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+
+                }
+
+                break;
+
+            case "LM3D2T8PZI5":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        if (Step == 7)
+                                        {
+                                            sendToArduino("off0");
+                                        }
+
+                                        if (Step == 9)
+                                        {
+                                            sendToArduino("on1");
+                                        }
+
+                                        break;
+
+                                    default:
+
+                                        if (Step == 7)
+                                        {
+                                            sendToArduino("on0");
+                                        }
+
+                                        if (Step == 9)
+                                        {
+                                            sendToArduino("off1");
+                                        }
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+                            case "1":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        if (Step == 10)
+                                        {
+                                            sendToArduino("on0");
+                                        }
+
+                                        break;
+
+                                    default:
+
+                                        if (Step == 10)
+                                        {
+                                            sendToArduino("off0");
+                                        }
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+                        }
+
+                        break;
+
+                    case "p":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "80":
+
+                                        if (Step == 6)
+                                        {
+                                            AllStringToSend.Add("on1");
+                                            AllStringToSend.Add("on0");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
+
+                                        break;
+
+                                    case "60":
+
+                                        AllStringToSend.Add("off1");
+                                        AllStringToSend.Add("off0");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                    case "100":
+
+                                        if (Step == 6)
+                                        {
+                                            AllStringToSend.Add("off1");
+                                            AllStringToSend.Add("off0");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+                        }
+
+                        break;
+
+                    case "e":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "4":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "2":
+
+                                        if (Step == 8)
+                                        {
+                                            sendToArduino("on0");
+                                        }
+
+                                        break;
+
+                                    default:
+
+                                        if (Step == 8)
+                                        {
+                                            sendToArduino("off0");
+                                        }
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+
+                }
+
+                break;
+
+            case "LM3D4T7PZI1":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "t":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        sendToArduino("s6goto111");
+
+                                        break;
+
+                                    case "0":
+
+                                        sendToArduino("s6goto74");
+
+                                        break;
+
+                                    case "2":
+
+                                        sendToArduino("s6goto37");
+
+                                        break;
+                                }
+
+                                break;
+
+                            case "1":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        sendToArduino("s5goto37");
+
+                                        break;
+
+                                    case "0":
+
+                                        sendToArduino("s5goto74");
+
+                                        break;
+
+                                    case "2":
+
+                                        sendToArduino("s5goto111");
+
+                                        break;
+
+                                }
+
+                                break;
+
+
+                        }
+
+                        break;
+
+
+
+                }
+
+                break;
+
+            case "LM3D4T7PZI2":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "1":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        sendToArduino("s0goto141");
+
+                                        break;
+
+                                    case "0":
+
+                                        sendToArduino("s0goto0");
+
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        AllStringToSend.Add("s1goto84");
+                                        AllStringToSend.Add("s2goto100");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                    case "0":
+
+                                        AllStringToSend.Add("s1goto0");
+                                        AllStringToSend.Add("s2goto0");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+                            case "2":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        sendToArduino("s3goto0");
+
+                                        break;
+
+                                    case "0":
+
+                                        sendToArduino("s3goto100");
+
+                                        break;
+
+                                }
+
+                                break;
+
+                            
+
+                        }
+
+                        break;
+
+                    case "e":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        StartCoroutine(_3_4_7_2());
+
+                                        break;
+
+                                    case "0":
+
+                                        StartCoroutine(_3_4_7_2());
+
+                                        break;
+
+                                    case "2":
+
+                                        StartCoroutine(_3_4_7_2());
+
+                                        break;
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+
+                }
+
+                break;
+
+            case "LM3D4T7PZI3":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "1":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        sendToArduino("s0goto141");
+
+                                        break;
+
+                                    case "0":
+
+                                        AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("off0");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        AllStringToSend.Add("s1goto86");
+                                        AllStringToSend.Add("s2goto100");
+                                        AllStringToSend.Add("s5goto100");
+                                        AllStringToSend.Add("s6goto100");
+                                        AllStringToSend.Add("on0");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                    case "0":
+
+                                        AllStringToSend.Add("s1goto0");
+                                        AllStringToSend.Add("s2goto0");
+                                        AllStringToSend.Add("s5goto74");
+                                        AllStringToSend.Add("s6goto74");
+                                        AllStringToSend.Add("off0");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+                            case "2":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        sendToArduino("s3goto0");
+
+                                        break;
+
+                                    case "0":
+
+                                        sendToArduino("s3goto100");
+
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "5":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        AllStringToSend.Add("off0");
+                                        AllStringToSend.Add("on1");
+                                        AllStringToSend.Add("s1goto150");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        if (Step == 7)
+                                        { 
+                                            if (!_3_4_7_3_bool)
+                                            {
+                                                _coroutine = StartCoroutine(_3_4_7_3());
+
+                                                _3_4_7_3_bool = true;
+                                            }
+                                        }
+
+                                        if (Step == 26)
+                                        {
+                                            StartCoroutine(lamp3473_on_off());
+                                            AllStringToSend.Add("s5goto74");
+                                            AllStringToSend.Add("s6goto74");
+                                            AllStringToSend.Add("s1goto84");
+                                            StartCoroutine(SendStringsToArduino());
+                                        }
+
+                                        break;
+
+                                    case "0":
+
+                                        AllStringToSend.Add("on0");
+                                        AllStringToSend.Add("off1");
+                                        AllStringToSend.Add("s5goto74");
+                                        AllStringToSend.Add("s6goto74");
+                                        AllStringToSend.Add("s1goto84");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+                        }
+
+                        break;
+
+                    case "e":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        StartCoroutine(_3_4_7_2());
+
+                                        break;
+
+                                    case "0":
+
+                                        StartCoroutine(_3_4_7_2());
+
+                                        break;
+
+                                    case "2":
+
+                                        StartCoroutine(_3_4_7_2());
+
+                                        break;
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+                    case "t":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        sendToArduino("s6goto124");
+
+                                        break;
+
+                                    case "2":
+
+                                        sendToArduino("s6goto19");
+
+                                        break;
+                                }
+
+                                break;
+
+                            case "1":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        sendToArduino("s5goto19");
+
+                                        break;
+
+                                    case "2":
+
+                                        sendToArduino("s5goto118");
+
+                                        break;
+
+                                }
+
+                                break;
+
+
+                        }
+
+                        break;
+
+
+
+                }
+
+                break;
+
+            case "LM3D5T6PZI1":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        AllStringToSend.Add("s0goto20");
+                                        AllStringToSend.Add("s1goto83");
+                                        AllStringToSend.Add("s2goto98");
+                                        AllStringToSend.Add("on4");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                    case "0":
+
+                                        AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("s1goto0");
+                                        AllStringToSend.Add("s2goto0");
+                                        AllStringToSend.Add("off4");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "2":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "0":
+
+                                        if (Step == 8)
+                                        {
+                                            StartCoroutine(_3_5_6_1());
+                                        }
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+                        }
+
+                        break;
+
+
+                }
+
+                break;
+
+            case "LM4D3T5PZI1":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "42":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        AllStringToSend.Add("on40");
+                                        AllStringToSend.Add("on55");
+                                        AllStringToSend.Add("on60");
+                                        AllStringToSend.Add("on50");
+                                        AllStringToSend.Add("on44");
+                                        AllStringToSend.Add("on43");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                    case "0":
+
+                                        sendToArduino("off");
+
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        AllStringToSend.Add("on30");
+                                        AllStringToSend.Add("on65");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "1":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        AllStringToSend.Add("off43");
+                                        AllStringToSend.Add("on53");
+                                        AllStringToSend.Add("off30");
+                                        AllStringToSend.Add("on31");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "9":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        sendToArduino("off");
+
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "2":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        AllStringToSend.Add("on40");
+                                        AllStringToSend.Add("on55");
+                                        AllStringToSend.Add("on60");
+                                        AllStringToSend.Add("on50");
+                                        AllStringToSend.Add("on44");
+                                        AllStringToSend.Add("on43");
+                                        AllStringToSend.Add("on65");
+                                        AllStringToSend.Add("on32");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "3":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        AllStringToSend.Add("off43");
+                                        AllStringToSend.Add("on48");
+                                        AllStringToSend.Add("off32");
+                                        AllStringToSend.Add("on33");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                }
+
+                                break;
+
+                        }
+
+                        break;
+
+                    
+
+
+                }
+
+
+                break;
+
+            case "LM4D3T5PZI2":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "42":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        AllStringToSend.Add("on40");
+                                        AllStringToSend.Add("on55");
+                                        AllStringToSend.Add("on60");
+                                        AllStringToSend.Add("on50");
+                                        AllStringToSend.Add("on44");
+                                        AllStringToSend.Add("on43");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                    case "0":
+
+                                        sendToArduino("off");
+
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "35":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        AllStringToSend.Add("on14");
+                                        AllStringToSend.Add("on65");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "36":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        AllStringToSend.Add("off14");
+                                        AllStringToSend.Add("on13");
+                                        AllStringToSend.Add("off43");
+                                        AllStringToSend.Add("on48");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "39":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        sendToArduino("off");
+
+                                        break;
+
+                                }
+
+                                break;
+
+
+                        }
+
+                        break;
+
+
+                }
+
+
+                break;
+
+            case "LM3D5T8PZI3":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+
+                    case "p":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "0":
+
+                                        sendToArduino("s0goto0");
+
+                                        break;
+
+                                    case "20":
+
+                                        sendToArduino("s0goto3");
+
+                                        break;
+
+                                    case "60":
+
+                                        sendToArduino("s0goto43");
+
+                                        break;
+
+                                    case "100":
+
+                                        sendToArduino("s0goto110");
+
+                                        break;
+
+                                    case "140":
+
+                                        sendToArduino("s0goto176");
+
+                                        break;
+
+                                    case "180":
+
+                                        sendToArduino("s0goto216");
+
+                                        break;
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+
+                }
+
+
+                break;
+
+            case "LM3D5T8PZI4":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+
+                    case "p":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "0":
+
+                                        sendToArduino("s0goto0");
+
+                                        break;
+
+                                    case "20":
+
+                                        sendToArduino("s0goto3");
+
+                                        break;
+
+                                    case "40":
+
+                                        sendToArduino("s0goto34");
+
+                                        break;
+
+                                    case "60":
+
+                                        sendToArduino("s0goto40");
+
+                                        break;
+
+                                    case "80":
+
+                                        sendToArduino("s0goto67");
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+
+                }
+
+
+                break;
+
+            case "LM3D5T8PZI5":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+
+                    case "p":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "0":
+
+                                        sendToArduino("s0goto0");
+
+                                        break;
+
+                                    case "20":
+
+                                        sendToArduino("s0goto3");
+
+                                        break;
+
+                                    case "60":
+
+                                        sendToArduino("s0goto43");
+
+                                        break;
+
+                                    case "100":
+
+                                        sendToArduino("s0goto110");
+
+                                        break;
+
+                                    case "140":
+
+                                        sendToArduino("s0goto176");
+
+                                        break;
+
+                                    case "180":
+
+                                        sendToArduino("s0goto216");
+
+                                        break;
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+
+                }
+
+
+                break;
+
+            case "LM3D5T1PZI1":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        AllStringToSend.Add("on2");
+                                        AllStringToSend.Add("on8");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                    case "0":
+
+                                        AllStringToSend.Add("off");
+                                        AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("s1goto0");
+                                        AllStringToSend.Add("s2goto0");
+                                        AllStringToSend.Add("s3goto0");
+                                        AllStringToSend.Add("s4goto0");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+                    case "e":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "3":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "7":
+                                        if (Step == 2) 
+                                        {
+                                            StartCoroutine(_3_5_1_1sh3());
+                                        }
+                                        break;
+
+                                    case "8":
+                                        if (Step == 7)
+                                        {
+                                            sendToArduino("s0goto-2160");
+                                        }
+
+                                        if (Step == 9)
+                                        {
+                                            sendToArduino("s0goto-4240");
+                                        }
+
+                                        if (Step == 11)
+                                        {
+                                            sendToArduino("s0goto-6240");
+                                        }
+
+                                        if (Step == 13)
+                                        {
+                                            sendToArduino("s0goto-10080");
+                                        }
+
+                                        if (Step == 15)
+                                        {
+                                            sendToArduino("s0goto-14160");
+                                        }
+
+                                        if (Step == 17)
+                                        {
+                                            StartCoroutine(_3_5_1_1sh18());
+                                        }
+
+                                        if (Step == 19)
+                                        {
+                                            sendToArduino("s1goto-5920");
+                                        }
+
+                                        if (Step == 21)
+                                        {
+                                            sendToArduino("s1goto-7520");
+                                        }
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "4":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "3":
+                                        if (Step == 4)
+                                        {
+                                            StartCoroutine(_3_5_1_1sh5());
+                                        }
+
+                                        if (Step == 23)
+                                        {
+                                            sendToArduino("s1goto-5920");
+                                        }
+
+                                        if (Step == 25)
+                                        {
+                                            sendToArduino("s1goto-2720");
+                                        }
+
+                                        if (Step == 27)
+                                        {
+                                            StartCoroutine(_3_5_1_1sh28());
+                                        }
+
+                                        if (Step == 29)
+                                        {
+                                            sendToArduino("s0goto-10080");
+                                        }
+
+                                        if (Step == 31)
+                                        {
+                                            sendToArduino("s0goto-6240");
+                                        }
+
+                                        if (Step == 33)
+                                        {
+                                            sendToArduino("s0goto-4240");
+                                        }
+
+                                        if (Step == 35)
+                                        {
+                                            sendToArduino("s0goto-2160");
+                                        }
+
+                                        if (Step == 37)
+                                        {
+                                            sendToArduino("s0goto-400");
+                                        }
+
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "5":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "9":
+                                        if (Step == 5)
+                                        {
+                                            sendToArduino("s0goto0");
+                                        }
+
+                                        if (Step == 38)
+                                        {
+                                            sendToArduino("s0goto0");
+                                        }
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "6":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "3":
+                                        if (Step == 40)
+                                        {
+                                            sendToArduino("s0goto-400");
+                                        }
+
+                                        break;
+
+                                }
+
+                                break;
+
+                        }
+
+                        break;
+
+
+                }
+
+
+                break;
+
+            case "LM3D5T2PZI1":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        AllStringToSend.Add("on2");
+                                        AllStringToSend.Add("on8");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                    case "0":
+
+                                        AllStringToSend.Add("off");
+                                        AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("s1goto0");
+                                        AllStringToSend.Add("s2goto0");
+                                        AllStringToSend.Add("s3goto0");
+                                        AllStringToSend.Add("s4goto0");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+                    case "e":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "5":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "9":
+                                        if (Step == 6)
+                                        {
+                                            sendToArduino("s3goto102");
+                                        }
+
+                                        if (Step == 8)
+                                        {
+                                            sendToArduino("s3goto284");
+                                        }
+                                        break;
+
+                                    case "8":
+                                        if (Step == 10)
+                                        {
+                                            sendToArduino("s3goto3546");
+                                        }
+
+                                        break;
+                                }
+
+                                break;
+
+                            case "6":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "2":
+                                        if (Step == 12)
+                                        {
+                                            sendToArduino("s3goto284");
+                                        }
+
+                                        if (Step == 14)
+                                        {
+                                            sendToArduino("s3goto102");
+                                        }
+                                        if (Step == 16)
+                                        {
+                                            sendToArduino("s3goto0");
+                                        }
+                                        break;
+
+                                }
+
+                                break;
+
+                        }
+
+                        break;
+
+
+                }
+
+
+                break;
+
+            case "LM3D5T2PZI2":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        AllStringToSend.Add("on2");
+                                        AllStringToSend.Add("on8");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                    case "0":
+
+                                        AllStringToSend.Add("off");
+                                        AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("s1goto0");
+                                        AllStringToSend.Add("s2goto0");
+                                        AllStringToSend.Add("s3goto0");
+                                        AllStringToSend.Add("s4goto0");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+                    case "e":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "3":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "7":
+                                        if (Step == 6)
+                                        {
+                                            StartCoroutine(_3_5_2_2sh7());
+                                        }
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "4":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "2":
+                                        if (Step == 8)
+                                        {
+                                            StartCoroutine(_3_5_2_2sh9());
+                                        }
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "5":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "8":
+                                        if (Step == 12)
+                                        {
+                                            sendToArduino("s3goto7200");
+                                        }
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "6":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "2":
+                                        if (Step == 14)
+                                        {
+                                            sendToArduino("s3goto0");
+                                        }
+                                        break;
+
+                                }
+
+                                break;
+
+                        }
+
+                        break;
+
+
+                }
+
+
+                break;
+
+            case "LM3D5T3PZI1":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        AllStringToSend.Add("on2");
+                                        AllStringToSend.Add("on8");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                    case "0":
+
+                                        AllStringToSend.Add("off");
+                                        AllStringToSend.Add("s0goto0");
+                                        AllStringToSend.Add("s1goto0");
+                                        AllStringToSend.Add("s2goto0");
+                                        AllStringToSend.Add("s3goto0");
+                                        AllStringToSend.Add("s4goto0");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+
+
+                        }
+
+                        break;
+
+                    case "e":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "3":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "5":
+                                        if (Step == 6)
+                                        {
+                                            StartCoroutine(_3_5_3_1sh7());
+                                        }
+
+                                        if (Step == 14)
+                                        {
+                                            StartCoroutine(_3_5_3_1sh15());
+                                        }
+                                        break;
+
+                                }
+
+                                break;
+
+                            case "4":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "5":
+                                        if (Step == 9)
+                                        {
+                                            sendToArduino("s1goto-6400");
+                                        }
+
+                                        if (Step == 13)
+                                        {
+                                            StartCoroutine(_3_5_3_1sh14());
+                                        }
+                                        break;
+
+                                    case "10":
+                                        if (Step == 16)
+                                        {
+                                            StartCoroutine(_3_5_3_1sh17());
+                                        }
+                                        break;
+
+                                }
+
+                                break;
+
+                            
+
+                        }
+
+                        break;
+
+
+                }
+
+
+                break;
+
+            case "LM2D2T7PZI10":
+
+
+                switch (StrFromArduino[0])
+
+                {
+
+                    case "b":
+
+                        switch (StrFromArduino[1])
+
+                        {
+
+                            case "0":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+
+                                        AllStringToSend.Add("on31");
+                                        AllStringToSend.Add("on14");
+                                        AllStringToSend.Add("on20");
+                                        StartCoroutine(SendStringsToArduino());
+
+                                        break;
+
+                                    case "0":
+
+                                        sendToArduino("off");
+
+                                        break;
+
+
+                                }
+
+                                break;
+
+                            case "4":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+                                        if (Step == 8) 
+                                        {
+                                            sendToArduino("on19");
+                                        }
+
+                                        if (Step == 14)
+                                        {
+                                            sendToArduino("off19");
+                                        }
+
+                                        if (Step == 16)
+                                        {
+                                            sendToArduino("on19");
+                                        }
+
+                                        if (Step == 33)
+                                        {
+                                            sendToArduino("off19");
+                                        }
+                                        break;
+
+                                    case "0":
+                                        if (Step == 11)
+                                        {
+                                            sendToArduino("off19");
+                                        }
+                                        break;
+
+
+                                }
+
+                                break;
+
+                            case "5":
+
+                                switch (StrFromArduino[2])
+
+                                {
+
+                                    case "1":
+                                        if (Step == 12)
+                                        {
+                                            sendToArduino("on19");
+                                        }
+                                        break;
+
+
+                                }
+
+                                break;
+
+                        }
+
+                        break;
+
+                    
+
+
+                }
+
+
+                break;
 
         }
-
-
 
 
 
@@ -6398,6 +11114,14 @@ public class PziLogic : MonoBehaviour
         if (Step == 0)
         {
             sendToArduino("s1goto70");
+        }
+        if (Step == 13)
+        {
+            sendToArduino("s1goto72");
+        }
+        if (Step == 21)
+        {
+            sendToArduino("s1goto74");
         }
     }
     public void LM3D3T3PZI13()
@@ -6942,7 +11666,7 @@ public class PziLogic : MonoBehaviour
         {
             AllStringToSend.Add("on1");
             AllStringToSend.Add("on2");
-            AllStringToSend.Add("on7");
+            AllStringToSend.Add("on6");
             StartCoroutine(LampWait_4s());
         }
 
@@ -6957,7 +11681,7 @@ public class PziLogic : MonoBehaviour
 
         if (Step == 4)
         {
-            AllStringToSend.Add("off19");
+            AllStringToSend.Add("off20");
             AllStringToSend.Add("on10");
             StartCoroutine(SendStringsToArduino());
         }
@@ -7176,7 +11900,7 @@ public class PziLogic : MonoBehaviour
     {
         if (Step == 0)
         {
-            sendToArduino("s0goto76");
+            sendToArduino("s0goto79");
         }
 
         if (Step == 1)
@@ -7189,7 +11913,7 @@ public class PziLogic : MonoBehaviour
     {
         if (Step == 0)
         {
-            sendToArduino("s0goto76");
+            sendToArduino("s0goto79");
         }
 
         if (Step == 3)
@@ -7201,7 +11925,7 @@ public class PziLogic : MonoBehaviour
         {
             AllStringToSend.Add("on1");
             AllStringToSend.Add("on3");
-            AllStringToSend.Add("s0goto122");
+            AllStringToSend.Add("s0goto125");
             StartCoroutine(SendStringsToArduino());
         }
 
@@ -7229,6 +11953,31 @@ public class PziLogic : MonoBehaviour
 
 
     }
+    public void LM2D2T8PZI3()
+    {
+        if (Step == 0)
+        {
+            AllStringToSend.Add("on0");
+            AllStringToSend.Add("s0goto79");
+            StartCoroutine(SendStringsToArduino());
+        }
+
+        if (Step == 5)
+        {
+            AllStringToSend.Add("on1");
+            AllStringToSend.Add("on3");
+            StartCoroutine(SendStringsToArduino());
+        }
+
+        if (Step == 20)
+        {
+            AllStringToSend.Add("off0");
+            AllStringToSend.Add("off2");
+            StartCoroutine(SendStringsToArduino());
+        }
+
+
+    }
     public void LM3D5T8PZI6()
     {
         if (Step == 0)
@@ -7236,7 +11985,7 @@ public class PziLogic : MonoBehaviour
             sendToArduino("s0goto76");
         }
 
-        if (Step == 6)
+        if (Step == 5)
         {
             AllStringToSend.Add("on4");
             AllStringToSend.Add("on0");
@@ -7249,6 +11998,132 @@ public class PziLogic : MonoBehaviour
         }
 
     }
+    public void LM3D2T6PZI3()
+    {
+        if (Step == 4)
+        {
+            sendToArduino("s0goto10");
+        }
+
+        if (Step == 6)
+        {
+            sendToArduino("s0goto205");
+        }
+
+        if (Step == 8)
+        {
+            sendToArduino("s0goto11");
+        }
+
+        if (Step == 10)
+        {
+            sendToArduino("s0goto205");
+        }
+
+        if (Step == 13)
+        {
+            sendToArduino("s0goto20");
+        }
+
+        if (Step == 15)
+        {
+            sendToArduino("s0goto0");
+        }
+
+        if (Step == 18)
+        {
+            sendToArduino("s0goto20");
+        }
+
+        if (Step == 20)
+        {
+            sendToArduino("s0goto0");
+        }
+
+    }
+    public void LM3D5T5PZI1()
+    {
+        if (Step == 14)
+        {
+            sendToArduino("s0goto202");
+        }
 
 
+    }
+    public void LM3D5T5PZI2()
+    {
+        if (Step == 19)
+        {
+            sendToArduino("s0goto202");
+        }
+
+
+    }
+    public void LM3D4T7PZI1()
+    {
+        if (Step == 0)
+        {
+            AllStringToSend.Add("s5goto74");
+            AllStringToSend.Add("s6goto74");
+            AllStringToSend.Add("s3goto100");
+            StartCoroutine(SendStringsToArduino());
+        }
+
+        if (Step == 13)
+        {
+            AllStringToSend.Add("s5goto100");
+            AllStringToSend.Add("s6goto50");
+            AllStringToSend.Add("on0");
+            AllStringToSend.Add("s0goto141");
+            AllStringToSend.Add("s1goto84");
+            AllStringToSend.Add("s2goto100");
+            StartCoroutine(SendStringsToArduino());
+        }
+
+        if (Step == 14)
+        {
+            StartCoroutine(_3_4_7_1());
+        }
+    }
+    public void LM3D4T7PZI2()
+    {
+        if (Step == 0)
+        {
+            AllStringToSend.Add("s5goto74");
+            AllStringToSend.Add("s6goto74");
+            AllStringToSend.Add("s3goto100");
+            StartCoroutine(SendStringsToArduino());
+        }
+
+    }
+    public void LM3D4T7PZI3()
+    {
+        if (Step == 0)
+        {
+            AllStringToSend.Add("s5goto74");
+            AllStringToSend.Add("s6goto74");
+            AllStringToSend.Add("s3goto100");
+            StartCoroutine(SendStringsToArduino());
+        }
+
+        if (Step == 13)
+        {
+            StopCoroutine(_coroutine);
+        }
+
+    }
+
+    public void LM2D2T7PZI10()
+    {
+        if (Step == 14)
+        {
+            sendToArduino("111");
+        }
+
+        if (Step == 16)
+        {
+            sendToArduino("222");
+        }
+
+    }
 }
